@@ -1,6 +1,9 @@
-name: Deploy Site
+name: Build and Deploy
 
 on:
+  schedule:
+    # 9:00 UTC = 4am EST / 5am EDT
+    - cron: '0 9 * * *'
   push:
     branches: [main]
     paths:
@@ -8,27 +11,62 @@ on:
       - 'app.js'
       - 'style.css'
       - 'data/**'
-  workflow_dispatch: # Allow manual trigger
-
-concurrency:
-  group: deploy-gh-pages
-  cancel-in-progress: false
+      - 'scripts/scrape_to_json.rb'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+    inputs:
+      force_scrape:
+        description: 'Force re-scrape even if scraper unchanged'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 2  # Need history to detect changes
+
+      - name: Check if scraper changed
+        id: check_scraper
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            echo "needs_scrape=true" >> $GITHUB_OUTPUT
+            echo "Scheduled run - will scrape"
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.force_scrape }}" == "true" ]]; then
+            echo "needs_scrape=true" >> $GITHUB_OUTPUT
+            echo "Manual run with force_scrape - will scrape"
+          elif git diff --name-only HEAD~1 HEAD | grep -q "scripts/scrape_to_json.rb"; then
+            echo "needs_scrape=true" >> $GITHUB_OUTPUT
+            echo "Scraper changed - will scrape"
+          else
+            echo "needs_scrape=false" >> $GITHUB_OUTPUT
+            echo "Scraper unchanged - will use existing data"
+          fi
+
+      - name: Set up Ruby
+        if: steps.check_scraper.outputs.needs_scrape == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Run scraper
+        if: steps.check_scraper.outputs.needs_scrape == 'true'
+        run: |
+          mkdir -p data
+          ruby scripts/scrape_to_json.rb
 
       - name: Get existing data from gh-pages
+        if: steps.check_scraper.outputs.needs_scrape == 'false'
         run: |
-          git fetch origin gh-pages
-          git checkout origin/gh-pages -- data/ || echo "No existing data, will deploy without"
+          git fetch origin gh-pages || exit 0
+          git checkout origin/gh-pages -- data/ 2>/dev/null || echo "No existing data on gh-pages"
 
       - name: Deploy to gh-pages
         run: |
@@ -39,13 +77,14 @@ jobs:
           # Create a temp directory with deploy content
           mkdir -p /tmp/deploy
           cp index.html app.js style.css /tmp/deploy/
-          cp -r data /tmp/deploy/ 2>/dev/null || echo "No data directory"
+          if [ -d data ]; then
+            cp -r data /tmp/deploy/
+          fi
 
           # Switch to gh-pages (create orphan if doesn't exist)
           git fetch origin gh-pages || true
           if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
             git checkout -f gh-pages
-            # Remove old files
             git rm -rf . || true
           else
             git checkout --orphan gh-pages
@@ -55,7 +94,7 @@ jobs:
           # Copy in new files
           cp -r /tmp/deploy/* .
 
-          # Commit and force push
+          # Commit and push
           git add -A
           if git diff --staged --quiet; then
             echo "No changes to deploy"
