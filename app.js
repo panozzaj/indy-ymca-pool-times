@@ -157,28 +157,30 @@ function toggleBranch(key) {
   renderSchedule();
 }
 
+// Format ISO date "2024-12-01" to display string "Sun 12/01"
+function formatDay(isoDate) {
+  const date = new Date(isoDate + 'T00:00:00');
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const dayName = days[date.getDay()];
+  const month = date.getMonth() + 1;
+  const day = date.getDate().toString().padStart(2, '0');
+  return `${dayName} ${month}/${day}`;
+}
+
+// Check if ISO date is today or in the future
+function isDayTodayOrFuture(isoDate) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const dayDate = new Date(isoDate + 'T00:00:00');
+  return dayDate >= today;
+}
+
 // Build URL to original YMCA schedule page
-function buildSourceUrl(branchId, dayStr) {
-  // dayStr is like "Mon 12/01" - need to convert to YYYY-MM-DD
-  const match = dayStr.match(/(\d+)\/(\d+)/);
-  if (!match) return null;
-
-  const month = parseInt(match[1]);
-  const day = parseInt(match[2]);
-
-  // Use generated_at to determine year (handle year rollover)
-  const generatedDate = new Date(scheduleData.generated_at);
-  let year = generatedDate.getFullYear();
-  // If month is less than generated month - 6, assume next year
-  if (month < generatedDate.getMonth() + 1 - 6) {
-    year++;
-  }
-
-  const date = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+function buildSourceUrl(branchId, isoDate) {
   const params = new URLSearchParams({
     BranchID: branchId,
     search: 'pool time',
-    date: date
+    date: isoDate
   });
   return `https://indy.recliquecore.com/classes/printer_friendly/?${params}`;
 }
@@ -241,7 +243,7 @@ function renderSchedule() {
   }
 
   const branches = scheduleData.branches.filter(b => selectedBranches.has(b.key));
-  const days = scheduleData.days;
+  const days = scheduleData.days.filter(isDayTodayOrFuture);
 
   if (days.length === 0) {
     container.innerHTML = '<p class="no-selection">No schedule data available</p>';
@@ -252,7 +254,7 @@ function renderSchedule() {
 
   days.forEach(day => {
     html += `<div class="day-section">`;
-    html += `<h2 class="day-header">${day}</h2>`;
+    html += `<h2 class="day-header">${formatDay(day)}</h2>`;
     html += `<div class="branches-grid" style="--branch-count: ${branches.length}">`;
 
     branches.forEach(branch => {

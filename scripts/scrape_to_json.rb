@@ -103,6 +103,17 @@ def current_week_sunday
   today - today.wday
 end
 
+# Convert "Mon 12/01" to ISO date "2024-12-01"
+def parse_day_to_iso(day_str)
+  return nil unless day_str =~ /(\d+)\/(\d+)/
+
+  month = Regexp.last_match(1).to_i
+  day = Regexp.last_match(2).to_i
+  today = Date.today
+  year = month < today.month - 6 ? today.year + 1 : today.year
+  Date.new(year, month, day).iso8601
+end
+
 # Generate Sunday dates for weeks to fetch
 def week_sundays
   base = current_week_sunday
@@ -146,8 +157,11 @@ def fetch_week_schedule(branch_id, week_date)
         duration_str = item.at_css("span.duration")&.text&.strip&.gsub(/[()]/, "") || ""
         end_time = calculate_end_time(raw_time, duration_str)
 
+        iso_day = parse_day_to_iso(date_headers[day_index])
+        next unless iso_day
+
         sessions << {
-          day: date_headers[day_index],
+          day: iso_day,
           start_time: start_time,
           end_time: end_time,
           name: name
@@ -156,10 +170,11 @@ def fetch_week_schedule(branch_id, week_date)
     end
   end
 
-  sessions.select! { |s| s[:name].start_with?("Lap Lane Swim") && s[:day] =~ /\d+\/\d+/ }
+  sessions.select! { |s| s[:name].start_with?("Lap Lane Swim") }
   sessions.each { |s| s[:lanes] = standardize_lanes(s[:name].sub("Lap Lane Swim - ", "")) }
 
-  { days: date_headers, sessions: sessions }
+  iso_days = date_headers.map { |d| parse_day_to_iso(d) }.compact
+  { days: iso_days, sessions: sessions }
 end
 
 def fetch_branch_schedule(branch_id, branch_key, branch_name)
@@ -231,14 +246,8 @@ BRANCHES.each do |key, info|
   end
 end
 
-# Sort days chronologically, handling year rollover
-all_days = all_days.uniq
-today = Date.today
-all_days.sort_by! do |d|
-  month, day = d.split(" ").last.split("/").map(&:to_i)
-  year = month < today.month - 6 ? today.year + 1 : today.year
-  Date.new(year, month, day)
-end
+# Sort days chronologically (ISO dates sort naturally)
+all_days = all_days.uniq.sort
 
 output = {
   generated_at: Time.now.utc.iso8601,
