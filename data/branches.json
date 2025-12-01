@@ -1,0 +1,90 @@
+[
+  {
+    "key": "westfield",
+    "name": "Ascension St. Vincent YMCA",
+    "area": "",
+    "address": "17660 Shamrock Blvd, Westfield, IN 46074",
+    "lat": 40.0438,
+    "lng": -86.132806
+  },
+  {
+    "key": "avondale",
+    "name": "Avondale Meadows YMCA",
+    "area": "Near Northside",
+    "address": "3908 Meadows Dr, Indianapolis, IN 46205",
+    "lat": 39.828218,
+    "lng": -86.115313
+  },
+  {
+    "key": "baxter",
+    "name": "Baxter YMCA",
+    "area": "Southside",
+    "address": "7900 Shelby St, Indianapolis, IN 46227",
+    "lat": 39.65209,
+    "lng": -86.140582
+  },
+  {
+    "key": "benjamin",
+    "name": "Benjamin Harrison YMCA",
+    "area": "Lawrence",
+    "address": "5736 Lee Rd, Indianapolis, IN 46216",
+    "lat": 39.867,
+    "lng": -85.982
+  },
+  {
+    "key": "fishers",
+    "name": "Fishers YMCA",
+    "area": "",
+    "address": "9012 E 126th St, Fishers, IN 46038",
+    "lat": 39.972474,
+    "lng": -86.009897
+  },
+  {
+    "key": "hendricks",
+    "name": "Hendricks Regional Health YMCA",
+    "area": "Avon",
+    "address": "301 Satori Pkwy, Avon, IN 46123",
+    "lat": 39.76762,
+    "lng": -86.37027
+  },
+  {
+    "key": "irsay",
+    "name": "Irsay Family YMCA",
+    "area": "West",
+    "address": "7900 W 21st St, Indianapolis, IN 46214",
+    "lat": 39.793799,
+    "lng": -86.29978
+  },
+  {
+    "key": "jordan",
+    "name": "Jordan YMCA",
+    "area": "Nora",
+    "address": "8400 Westfield Blvd, Indianapolis, IN 46240",
+    "lat": 39.90859,
+    "lng": -86.135762
+  },
+  {
+    "key": "orthoindy",
+    "name": "OrthoIndy Foundation YMCA",
+    "area": "Near Northwest",
+    "address": "5315 Lafayette Rd, Indianapolis, IN 46254",
+    "lat": 39.848594,
+    "lng": -86.257201
+  },
+  {
+    "key": "ransburg",
+    "name": "Ransburg YMCA",
+    "area": "Eastside",
+    "address": "501 N Shortridge Rd, Indianapolis, IN 46219",
+    "lat": 39.778903,
+    "lng": -86.039727
+  },
+  {
+    "key": "witham",
+    "name": "Witham Family YMCA",
+    "area": "Lebanon",
+    "address": "1000 S Lebanon St, Lebanon, IN 46052",
+    "lat": 40.039939,
+    "lng": -86.470002
+  }
+]

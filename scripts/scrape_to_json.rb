@@ -179,11 +179,16 @@ def fetch_branch_schedule(branch_id, branch_key, branch_name)
   }
 end
 
+# Normalize lane text for comparison (e.g., "10 Lanes" vs "10 lane" -> "10")
+def normalize_lanes(lanes)
+  lanes[/\d+/] || lanes.downcase
+end
+
 def merge_items(items)
   merged = []
   items.each do |item|
     prev = merged.last
-    if prev && prev[:lanes] == item[:lanes] && prev[:end_time] == item[:start_time]
+    if prev && normalize_lanes(prev[:lanes]) == normalize_lanes(item[:lanes]) && prev[:end_time] == item[:start_time]
       prev[:end_time] = item[:end_time]
     else
       merged << item.dup
