@@ -139,6 +139,15 @@ h1 {
   color: var(--text);
 }
 
+.branch-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.branch-name a:hover {
+  color: var(--primary);
+}
+
 .no-sessions {
   color: var(--text-muted);
   font-size: 0.85rem;
