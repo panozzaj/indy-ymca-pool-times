@@ -1,0 +1,61 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'app.js'
+      - 'style.css'
+      - 'data/**'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Get existing data from gh-pages
+        run: |
+          git fetch origin gh-pages
+          git checkout origin/gh-pages -- data/ || echo "No existing data, will deploy without"
+
+      - name: Deploy to gh-pages
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create a temp directory with deploy content
+          mkdir -p /tmp/deploy
+          cp index.html app.js style.css /tmp/deploy/
+          cp -r data /tmp/deploy/ 2>/dev/null || echo "No data directory"
+
+          # Switch to gh-pages (create orphan if doesn't exist)
+          git fetch origin gh-pages || true
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git checkout -f gh-pages
+            # Remove old files
+            git rm -rf . || true
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . || true
+          fi
+
+          # Copy in new files
+          cp -r /tmp/deploy/* .
+
+          # Commit and force push
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "Deploy: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin gh-pages --force
+          fi
