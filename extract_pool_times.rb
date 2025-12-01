@@ -1,0 +1,336 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/inline"
+
+gemfile do
+  source "https://rubygems.org"
+  gem "nokogiri"
+end
+
+require "net/http"
+require "uri"
+require "optparse"
+require "time"
+
+BRANCHES = {
+  "westfield" => { id: 40, name: "Ascension St. Vincent in Westfield" },
+  "avondale" => { id: 22, name: "Avondale Meadows" },
+  "baxter" => { id: 30, name: "Baxter" },
+  "benjamin" => { id: 20, name: "Benjamin Harrison" },
+  "fishers" => { id: 16, name: "Fishers" },
+  "hendricks" => { id: 26, name: "Hendricks Regional Health" },
+  "irsay" => { id: 24, name: "Irsay" },
+  "jordan" => { id: 34, name: "Jordan" },
+  "orthoindy" => { id: 36, name: "OrthoIndy Foundation" },
+  "ransburg" => { id: 32, name: "Ransburg" },
+  "witham" => { id: 18, name: "Witham" }
+}.freeze
+
+options = {
+  branch_ids: [],
+  search: "pool time",
+  histogram: false,
+  days: nil  # nil = all, or array of day prefixes
+}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
+
+  opts.on("-b", "--branch NAME|ID", "Branch name or ID (can specify multiple)") do |v|
+    if v =~ /^\d+$/
+      options[:branch_ids] << v.to_i
+    elsif BRANCHES[v.downcase]
+      options[:branch_ids] << BRANCHES[v.downcase][:id]
+    else
+      warn "Unknown branch: #{v}. Use --list to see available branches."
+      exit 1
+    end
+  end
+
+  opts.on("--list", "List available branches") do
+    puts "Available branches:"
+    BRANCHES.sort_by { |_, v| v[:name] }.each do |key, info|
+      puts "  #{key.ljust(12)} #{info[:name]} (ID: #{info[:id]})"
+    end
+    exit
+  end
+
+  opts.on("-s", "--search TERM", "Search term (default: 'pool time')") do |v|
+    options[:search] = v
+  end
+
+  opts.on("--histogram", "Show histogram instead of text") do
+    options[:histogram] = true
+  end
+
+  opts.on("--weekdays", "Show Monday-Friday only") do
+    options[:days] = %w[Mon Tue Wed Thu Fri]
+  end
+
+  opts.on("--weekend", "Show Saturday-Sunday only") do
+    options[:days] = %w[Sat Sun]
+  end
+
+  opts.on("-d", "--days DAYS", "Filter days (e.g., Mon,Tue,Wed)") do |v|
+    options[:days] = v.split(",").map(&:strip).map(&:capitalize)
+  end
+
+  opts.on("-h", "--help", "Show this help") do
+    puts opts
+    exit
+  end
+end.parse!
+
+def parse_duration_minutes(duration_str)
+  return 60 if duration_str.nil? || duration_str.empty?
+
+  if duration_str =~ /([\d.]+)\s*hr/
+    (Regexp.last_match(1).to_f * 60).to_i
+  elsif duration_str =~ /(\d+)\s*min/
+    Regexp.last_match(1).to_i
+  else
+    60
+  end
+end
+
+def format_time(time_str)
+  time_str.gsub(/\s+/, " ").strip
+end
+
+def normalize_time(time_str)
+  Time.parse(time_str).strftime("%I:%M %p").sub(/^0/, "")
+end
+
+def calculate_end_time(start_time_str, duration_str)
+  start = Time.parse(start_time_str)
+  minutes = parse_duration_minutes(duration_str)
+  end_time = start + (minutes * 60)
+  end_time.strftime("%I:%M %p").sub(/^0/, "")
+end
+
+def parse_lanes(lanes_str)
+  # Extract max lanes from strings like "4-6 open lanes", "7 open lanes"
+  if lanes_str =~ /(\d+)(?:-(\d+))?\s*(?:open\s*)?lane/i
+    Regexp.last_match(2)&.to_i || Regexp.last_match(1).to_i
+  else
+    0
+  end
+end
+
+def hour_label(hour)
+  if hour == 0
+    "12a"
+  elsif hour < 12
+    "#{hour}a"
+  elsif hour == 12
+    "12p"
+  else
+    "#{hour - 12}p"
+  end
+end
+
+# Default to fishers if no branch specified
+options[:branch_ids] << 16 if options[:branch_ids].empty?
+
+def fetch_branch_schedule(branch_id, search_term)
+  url = "https://indy.recliquecore.com/classes/printer_friendly/?#{URI.encode_www_form(BranchID: branch_id, search: search_term)}"
+  html = `curl -s '#{url}'`
+  return nil if html.empty?
+
+  doc = Nokogiri::HTML(html)
+
+  date_headers = doc.css("table#week_classes thead th").map(&:text).map(&:strip).reject(&:empty?)
+  date_headers.reject! { |h| h.downcase.include?("time") }
+
+  schedule = []
+  doc.css("tbody#non-condensed tr").each do |row|
+    cells = row.css("td")
+    next if cells.empty?
+
+    cells.each_with_index do |cell, day_index|
+      next if day_index >= date_headers.length
+
+      cell.css("div.item").each do |item|
+        time_el = item.at_css("span.c-time")
+        next unless time_el
+
+        raw_time = format_time(time_el.text)
+        start_time = normalize_time(raw_time)
+        category = item.at_css("div.category")&.text&.strip || ""
+        label = item.at_css("div.label")&.text&.strip || ""
+        name = [category, label].reject(&:empty?).join(" - ")
+        name = "Unknown" if name.empty?
+
+        duration_str = item.at_css("span.duration")&.text&.strip&.gsub(/[()]/, "") || ""
+        end_time = calculate_end_time(raw_time, duration_str)
+
+        schedule << {
+          day: date_headers[day_index],
+          start_time: start_time,
+          end_time: end_time,
+          name: name
+        }
+      end
+    end
+  end
+
+  schedule.select! { |s| s[:name].start_with?("Lap Lane Swim") && s[:day] =~ /\d+\/\d+/ }
+  schedule.each { |s| s[:lanes] = s[:name].sub("Lap Lane Swim - ", "") }
+
+  day_order = date_headers.each_with_index.to_h
+  schedule.sort_by! { |s| [day_order[s[:day]] || 99, Time.parse(s[:start_time])] }
+
+  { date_headers: date_headers, schedule: schedule.group_by { |s| s[:day] } }
+end
+
+def merge_items(items)
+  merged = []
+  items.each do |item|
+    prev = merged.last
+    if prev && prev[:lanes] == item[:lanes] && prev[:end_time] == item[:start_time]
+      prev[:end_time] = item[:end_time]
+    else
+      merged << item.dup
+    end
+  end
+  merged
+end
+
+def format_lines_for_day(items)
+  return [] if items.nil? || items.empty?
+
+  merged = merge_items(items)
+  max_start_width = merged.map { |item| item[:start_time].length }.max || 0
+  lines = []
+
+  merged.each_with_index do |item, idx|
+    if idx > 0
+      prev_end = Time.parse(merged[idx - 1][:end_time])
+      curr_start = Time.parse(item[:start_time])
+      if curr_start > prev_end
+        closed_start = merged[idx - 1][:end_time]
+        closed_end = item[:start_time]
+        lines << { text: "#{closed_start.rjust(max_start_width)} - #{closed_end.ljust(11)} No lanes", closed: true }
+      end
+    end
+    lines << { text: "#{item[:start_time].rjust(max_start_width)} - #{item[:end_time].ljust(11)} #{item[:lanes]}", closed: false }
+  end
+  lines
+end
+
+# Fetch all branch data
+all_branches = {}
+options[:branch_ids].each do |branch_id|
+  branch_name = BRANCHES.find { |_, v| v[:id] == branch_id }&.last&.fetch(:name) || "Branch #{branch_id}"
+  data = fetch_branch_schedule(branch_id, options[:search])
+  if data
+    all_branches[branch_name] = data
+  else
+    warn "Failed to fetch page for #{branch_name}"
+  end
+end
+
+exit 1 if all_branches.empty?
+
+# Collect all days across all branches
+all_days = all_branches.values.flat_map { |b| b[:date_headers] }.uniq
+# Sort by date
+all_days.sort_by! { |d| Date.strptime(d.split(" ").last, "%m/%d") rescue d }
+
+# Filter days if specified
+if options[:days]
+  all_days.select! { |day| options[:days].any? { |d| day.start_with?(d) } }
+end
+
+branch_names = all_branches.keys
+col_width = 42
+
+if branch_names.size == 1
+  # Single branch - original format
+  branch_name = branch_names.first
+  puts "=== #{branch_name} ==="
+
+  all_days.each do |day|
+    items = all_branches[branch_name][:schedule][day] || []
+    puts "\n#{day}"
+    puts "-" * 40
+
+    if options[:histogram]
+      # Build hourly lane availability (5am to 9pm)
+      hourly_lanes = {}
+      items.each do |item|
+        start_hour = Time.parse(item[:start_time]).hour
+        end_hour = Time.parse(item[:end_time]).hour
+        end_hour += 1 if Time.parse(item[:end_time]).min > 0
+        lanes = parse_lanes(item[:lanes])
+        (start_hour...end_hour).each { |h| hourly_lanes[h] = [hourly_lanes[h] || 0, lanes].max }
+      end
+
+      max_lanes = [hourly_lanes.values.max || 7, 7].max
+      header = (1..max_lanes).map { |n| n.to_s.ljust(2) }.join
+      puts "     #{header}"
+      puts "     +" + "--" * max_lanes + "+"
+
+      (5..20).each do |hour|
+        label = hour_label(hour).rjust(4)
+        lanes = hourly_lanes[hour] || 0
+        row = " |"
+        if lanes == 0
+          row += ". " * max_lanes
+          row.chomp!(" ")
+        else
+          (1..max_lanes).each { |l| row += lanes >= l ? "# " : "  " }
+          row.chomp!(" ")
+        end
+        row += "|"
+        puts "#{label}#{row}"
+      end
+      puts "     +" + "--" * max_lanes + "+"
+    else
+      lines = format_lines_for_day(items)
+      lines.each do |line|
+        if line[:closed]
+          puts "  \e[90m#{line[:text]}\e[0m"
+        else
+          puts "  #{line[:text]}"
+        end
+      end
+    end
+  end
+else
+  # Multiple branches - side by side
+  all_days.each do |day|
+    puts "\n#{day}"
+
+    # Print branch headers
+    header_line = branch_names.map { |name| name[0, col_width - 2].ljust(col_width) }.join("| ")
+    puts header_line
+    puts branch_names.map { "-" * col_width }.join("+ ")
+
+    # Get formatted lines for each branch
+    branch_lines = branch_names.map do |name|
+      items = all_branches[name][:schedule][day] || []
+      format_lines_for_day(items)
+    end
+
+    max_lines = branch_lines.map(&:size).max || 0
+
+    (0...max_lines).each do |i|
+      row_parts = branch_lines.map do |lines|
+        if i < lines.size
+          line = lines[i]
+          text = line[:text][0, col_width - 2]
+          if line[:closed]
+            "\e[90m#{text.ljust(col_width)}\e[0m"
+          else
+            text.ljust(col_width)
+          end
+        else
+          " " * col_width
+        end
+      end
+      puts row_parts.join("| ")
+    end
+  end
+end
