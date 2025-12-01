@@ -10,6 +10,10 @@ on:
       - 'data/**'
   workflow_dispatch: # Allow manual trigger
 
+concurrency:
+  group: deploy-gh-pages
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
