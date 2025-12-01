@@ -199,6 +199,10 @@ footer {
   }
 
   .branches-grid {
-    grid-template-columns: 1fr !important;
+    flex-direction: column;
+  }
+
+  .branch-column {
+    width: 100%;
   }
 }
