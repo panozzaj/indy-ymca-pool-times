@@ -157,6 +157,32 @@ function toggleBranch(key) {
   renderSchedule();
 }
 
+// Build URL to original YMCA schedule page
+function buildSourceUrl(branchId, dayStr) {
+  // dayStr is like "Mon 12/01" - need to convert to YYYY-MM-DD
+  const match = dayStr.match(/(\d+)\/(\d+)/);
+  if (!match) return null;
+
+  const month = parseInt(match[1]);
+  const day = parseInt(match[2]);
+
+  // Use generated_at to determine year (handle year rollover)
+  const generatedDate = new Date(scheduleData.generated_at);
+  let year = generatedDate.getFullYear();
+  // If month is less than generated month - 6, assume next year
+  if (month < generatedDate.getMonth() + 1 - 6) {
+    year++;
+  }
+
+  const date = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+  const params = new URLSearchParams({
+    BranchID: branchId,
+    search: 'pool time',
+    date: date
+  });
+  return `https://indy.recliquecore.com/classes/printer_friendly/?${params}`;
+}
+
 // Parse time string to minutes since midnight for comparison
 function timeToMinutes(timeStr) {
   const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
@@ -234,9 +260,14 @@ function renderSchedule() {
       const sessions = getSessionsWithGaps(rawSessions);
       const branchInfo = branchData.find(b => b.key === branch.key);
       const areaText = branchInfo?.area ? ` (${branchInfo.area})` : '';
+      const sourceUrl = buildSourceUrl(branch.id, day);
 
       html += `<div class="branch-column">`;
-      html += `<h3 class="branch-name">${branch.name}${areaText}</h3>`;
+      if (sourceUrl) {
+        html += `<h3 class="branch-name"><a href="${sourceUrl}" target="_blank" rel="noopener">${branch.name}${areaText}</a></h3>`;
+      } else {
+        html += `<h3 class="branch-name">${branch.name}${areaText}</h3>`;
+      }
 
       if (rawSessions.length === 0) {
         html += `<p class="no-sessions">No lap swim</p>`;
