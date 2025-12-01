@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-01T17:50:15Z",
+  "generated_at": "2025-12-01T20:21:10Z",
   "days": [
     "Sun 11/30",
     "Mon 12/01",
@@ -56,357 +56,357 @@
           {
             "start_time": "11:30 AM",
             "end_time": "2:30 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Mon 12/01": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Tue 12/02": [
           {
             "start_time": "5:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Wed 12/03": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Thu 12/04": [
           {
             "start_time": "5:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Fri 12/05": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/06": [
           {
             "start_time": "11:00 AM",
             "end_time": "6:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Sun 12/07": [
           {
             "start_time": "11:30 AM",
             "end_time": "2:30 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Mon 12/08": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Tue 12/09": [
           {
             "start_time": "5:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Wed 12/10": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Thu 12/11": [
           {
             "start_time": "5:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Fri 12/12": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/13": [
           {
             "start_time": "11:00 AM",
             "end_time": "6:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Sun 12/14": [
           {
             "start_time": "11:30 AM",
             "end_time": "2:30 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Mon 12/15": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Tue 12/16": [
           {
             "start_time": "5:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Wed 12/17": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Thu 12/18": [
           {
             "start_time": "5:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "8:00 PM",
             "end_time": "8:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ],
         "Fri 12/19": [
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "10 lane"
+            "lanes": "10 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/20": [
           {
             "start_time": "11:00 AM",
             "end_time": "6:45 PM",
-            "lanes": "10 Lanes"
+            "lanes": "10 lanes"
           }
         ]
       }
@@ -473,291 +473,291 @@
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Tue 12/02": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Wed 12/03": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Thu 12/04": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Fri 12/05": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Sat 12/06": [
           {
             "start_time": "7:00 AM",
             "end_time": "8:30 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Mon 12/08": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Tue 12/09": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Wed 12/10": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Thu 12/11": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Fri 12/12": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Sat 12/13": [
           {
             "start_time": "7:00 AM",
             "end_time": "8:30 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Mon 12/15": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Tue 12/16": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Wed 12/17": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Thu 12/18": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Fri 12/19": [
           {
             "start_time": "5:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "3 Swim Lanes-1 Water Walking Lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ],
         "Sat 12/20": [
           {
             "start_time": "7:00 AM",
             "end_time": "8:30 AM",
-            "lanes": "3 Swim Lanes- 1 Water Walking lane"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           }
         ]
       }
@@ -824,590 +824,590 @@
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:15 PM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "6:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "3 open lanes"
+            "lanes": "3 lanes"
           }
         ],
         "Tue 12/02": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "8:45 AM",
             "end_time": "10:15 AM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2-3 open lanes"
+            "lanes": "2-3 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "2-6 open lanes"
+            "lanes": "2-6 lanes"
           }
         ],
         "Wed 12/03": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "3 open lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/04": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "2 open lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/05": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Sat 12/06": [
           {
             "start_time": "7:00 AM",
             "end_time": "7:45 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:45 AM",
             "end_time": "12:15 PM",
-            "lanes": "3-4 open lanes"
+            "lanes": "3-4 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6-7 lanes open"
+            "lanes": "6-7 lanes"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Sun 12/07": [
           {
             "start_time": "12:00 PM",
             "end_time": "4:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Mon 12/08": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:15 PM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "6:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "3 open lanes"
+            "lanes": "3 lanes"
           }
         ],
         "Tue 12/09": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "8:45 AM",
             "end_time": "10:15 AM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2-3 open lanes"
+            "lanes": "2-3 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "2-6 open lanes"
+            "lanes": "2-6 lanes"
           }
         ],
         "Wed 12/10": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "3 open lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/11": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "2 open lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/12": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Sat 12/13": [
           {
             "start_time": "7:00 AM",
             "end_time": "7:45 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:45 AM",
             "end_time": "12:15 PM",
-            "lanes": "3-4 open lanes"
+            "lanes": "3-4 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6-7 lanes open"
+            "lanes": "6-7 lanes"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Sun 12/14": [
           {
             "start_time": "12:00 PM",
             "end_time": "4:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Mon 12/15": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:15 PM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "6:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "3 open lanes"
+            "lanes": "3 lanes"
           }
         ],
         "Tue 12/16": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "8:45 AM",
             "end_time": "10:15 AM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2-3 open lanes"
+            "lanes": "2-3 lanes"
           },
           {
             "start_time": "6:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "1 open lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "2-6 open lanes"
+            "lanes": "2-6 lanes"
           }
         ],
         "Wed 12/17": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "3 open lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/18": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "2 open lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/19": [
           {
             "start_time": "5:00 AM",
             "end_time": "7:00 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "8:45 AM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "10:15 AM",
             "end_time": "12:00 PM",
-            "lanes": "4-6 open lanes"
+            "lanes": "4-6 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6 open lanes"
+            "lanes": "6 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "4 open lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ],
         "Sat 12/20": [
           {
             "start_time": "7:00 AM",
             "end_time": "7:45 AM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           },
           {
             "start_time": "7:45 AM",
             "end_time": "12:15 PM",
-            "lanes": "3-4 open lanes"
+            "lanes": "3-4 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "6-7 lanes open"
+            "lanes": "6-7 lanes"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "7 open lanes"
+            "lanes": "7 lanes"
           }
         ]
       }
@@ -1459,17 +1459,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "5:30 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:30 PM",
             "end_time": "6:00 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:30 PM",
@@ -1501,17 +1501,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:45 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           }
         ],
         "Wed 12/03": [
@@ -1533,7 +1533,7 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:30 PM",
@@ -1555,7 +1555,7 @@
           {
             "start_time": "10:00 AM",
             "end_time": "11:00 AM",
-            "lanes": "Only 3 Lanes Open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
@@ -1565,12 +1565,12 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:45 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:30 PM",
@@ -1587,7 +1587,7 @@
           {
             "start_time": "8:00 AM",
             "end_time": "8:55 AM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "10:00 AM",
@@ -1602,17 +1602,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "Only 2 Lanes open"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           }
         ],
         "Sat 12/06": [
@@ -1624,12 +1624,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "8:55 AM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "3:00 PM",
-            "lanes": "3 Lanes only"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "3:00 PM",
@@ -1656,17 +1656,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "5:30 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:30 PM",
             "end_time": "6:00 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:30 PM",
@@ -1698,17 +1698,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:45 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           }
         ],
         "Wed 12/10": [
@@ -1730,7 +1730,7 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:30 PM",
@@ -1752,7 +1752,7 @@
           {
             "start_time": "10:00 AM",
             "end_time": "11:00 AM",
-            "lanes": "Only 3 Lanes Open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
@@ -1762,12 +1762,12 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:45 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:30 PM",
@@ -1784,7 +1784,7 @@
           {
             "start_time": "8:00 AM",
             "end_time": "8:55 AM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "10:00 AM",
@@ -1799,17 +1799,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "Only 2 Lanes open"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           }
         ],
         "Sat 12/13": [
@@ -1821,12 +1821,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "8:55 AM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "3:00 PM",
-            "lanes": "3 Lanes only"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "3:00 PM",
@@ -1853,17 +1853,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "5:30 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:30 PM",
             "end_time": "6:00 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:30 PM",
@@ -1895,17 +1895,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:45 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           }
         ],
         "Wed 12/17": [
@@ -1927,7 +1927,7 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:30 PM",
@@ -1949,7 +1949,7 @@
           {
             "start_time": "10:00 AM",
             "end_time": "11:00 AM",
-            "lanes": "Only 3 Lanes Open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "11:00 AM",
@@ -1959,12 +1959,12 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:45 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:30 PM",
@@ -1981,7 +1981,7 @@
           {
             "start_time": "8:00 AM",
             "end_time": "8:55 AM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "10:00 AM",
@@ -1996,17 +1996,17 @@
           {
             "start_time": "4:00 PM",
             "end_time": "4:55 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "7:00 PM",
-            "lanes": "Only 2 Lanes open"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "Only 3 Lanes open"
+            "lanes": "3 lanes"
           }
         ],
         "Sat 12/20": [
@@ -2018,12 +2018,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "8:55 AM",
-            "lanes": "Only 1 Lane open"
+            "lanes": "1 lane"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "3:00 PM",
-            "lanes": "3 Lanes only"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "3:00 PM",
@@ -2065,321 +2065,321 @@
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Tue 12/02": [
           {
             "start_time": "5:15 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "Swim Team Practice - Lanes 3 and 4"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Wed 12/03": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/04": [
           {
             "start_time": "5:15 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "Swim Team Practice - Lanes 3 and 4"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/05": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Sat 12/06": [
           {
             "start_time": "7:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "11:00 AM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Mon 12/08": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Tue 12/09": [
           {
             "start_time": "5:15 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "Swim Team Practice - Lanes 3 and 4"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Wed 12/10": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/11": [
           {
             "start_time": "5:15 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "Swim Team Practice - Lanes 3 and 4"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/12": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Sat 12/13": [
           {
             "start_time": "7:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "11:00 AM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Mon 12/15": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Tue 12/16": [
           {
             "start_time": "5:15 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "Swim Team Practice - Lanes 3 and 4"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Wed 12/17": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/18": [
           {
             "start_time": "5:15 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "5:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "Swim Team Practice - Lanes 3 and 4"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "7:15 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/19": [
           {
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Sat 12/20": [
           {
             "start_time": "7:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "11:00 AM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "11:00 AM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ]
       }
@@ -2421,12 +2421,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Tue 12/02": [
@@ -2438,12 +2438,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Wed 12/03": [
@@ -2455,12 +2455,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Thu 12/04": [
@@ -2472,17 +2472,17 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Fri 12/05": [
@@ -2494,12 +2494,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/06": [
@@ -2511,7 +2511,7 @@
           {
             "start_time": "8:00 AM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           }
         ],
         "Mon 12/08": [
@@ -2523,12 +2523,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Tue 12/09": [
@@ -2540,12 +2540,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Wed 12/10": [
@@ -2557,12 +2557,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Thu 12/11": [
@@ -2574,17 +2574,17 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Fri 12/12": [
@@ -2596,12 +2596,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/13": [
@@ -2613,7 +2613,7 @@
           {
             "start_time": "8:00 AM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           }
         ],
         "Mon 12/15": [
@@ -2625,12 +2625,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Tue 12/16": [
@@ -2642,12 +2642,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Wed 12/17": [
@@ -2659,12 +2659,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Thu 12/18": [
@@ -2676,17 +2676,17 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Fri 12/19": [
@@ -2698,12 +2698,12 @@
           {
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "6:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/20": [
@@ -2715,7 +2715,7 @@
           {
             "start_time": "8:00 AM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lanes"
+            "lanes": "1 lane"
           }
         ]
       }
@@ -2752,471 +2752,471 @@
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Tue 12/02": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Wed 12/03": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/04": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/05": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "10:00 AM",
             "end_time": "11:15 AM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "11:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Sat 12/06": [
           {
             "start_time": "7:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "8:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Mon 12/08": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Tue 12/09": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Wed 12/10": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/11": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/12": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "10:00 AM",
             "end_time": "11:15 AM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "11:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Sat 12/13": [
           {
             "start_time": "7:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "8:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Mon 12/15": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Tue 12/16": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Wed 12/17": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Thu 12/18": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "7:30 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Fri 12/19": [
           {
             "start_time": "5:15 AM",
             "end_time": "6:30 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "7:00 AM",
             "end_time": "10:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "10:00 AM",
             "end_time": "11:15 AM",
-            "lanes": "2 Lanes"
+            "lanes": "2 lanes"
           },
           {
             "start_time": "11:15 AM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:30 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ],
         "Sat 12/20": [
           {
             "start_time": "7:15 AM",
             "end_time": "8:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "8:00 AM",
             "end_time": "9:00 AM",
-            "lanes": "3 Lanes"
+            "lanes": "3 lanes"
           },
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           },
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           }
         ]
       }
@@ -3253,216 +3253,216 @@
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Tue 12/02": [
           {
             "start_time": "5:15 AM",
             "end_time": "11:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Wed 12/03": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Thu 12/04": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Fri 12/05": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/06": [
           {
             "start_time": "12:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Mon 12/08": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Tue 12/09": [
           {
             "start_time": "5:15 AM",
             "end_time": "11:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Wed 12/10": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Thu 12/11": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Fri 12/12": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/13": [
           {
             "start_time": "12:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Mon 12/15": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Tue 12/16": [
           {
             "start_time": "5:15 AM",
             "end_time": "11:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Wed 12/17": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Thu 12/18": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Fri 12/19": [
           {
             "start_time": "5:15 AM",
             "end_time": "9:00 AM",
-            "lanes": "4 Lanes"
+            "lanes": "4 lanes"
           },
           {
             "start_time": "4:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ],
         "Sat 12/20": [
           {
             "start_time": "12:00 PM",
             "end_time": "5:00 PM",
-            "lanes": "1 Lane"
+            "lanes": "1 lane"
           }
         ]
       }
