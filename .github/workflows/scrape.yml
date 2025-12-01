@@ -47,7 +47,7 @@ jobs:
           # Switch to gh-pages (create orphan if doesn't exist)
           git fetch origin gh-pages || true
           if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
-            git checkout gh-pages
+            git checkout -f gh-pages
             # Remove old files
             git rm -rf . || true
           else
