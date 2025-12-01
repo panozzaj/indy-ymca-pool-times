@@ -70,6 +70,22 @@ def format_time(time_str)
   time_str.gsub(/\s+/, " ").strip
 end
 
+# Standardize lane text to "X lane" or "X lanes" format
+def standardize_lanes(lanes_str)
+  return lanes_str if lanes_str.nil? || lanes_str.empty?
+
+  # Extract number or range (e.g., "4-6", "7", "2-3")
+  if lanes_str =~ /(\d+(?:-\d+)?)/
+    count = Regexp.last_match(1)
+    # Use singular for "1", plural otherwise
+    suffix = count == "1" ? "lane" : "lanes"
+    "#{count} #{suffix}"
+  else
+    # No number found, return original (e.g., "Lap Lane Swim")
+    lanes_str
+  end
+end
+
 def normalize_time(time_str)
   Time.parse(time_str).strftime("%I:%M %p").sub(/^0/, "")
 end
@@ -141,7 +157,7 @@ def fetch_week_schedule(branch_id, week_date)
   end
 
   sessions.select! { |s| s[:name].start_with?("Lap Lane Swim") && s[:day] =~ /\d+\/\d+/ }
-  sessions.each { |s| s[:lanes] = s[:name].sub("Lap Lane Swim - ", "") }
+  sessions.each { |s| s[:lanes] = standardize_lanes(s[:name].sub("Lap Lane Swim - ", "")) }
 
   { days: date_headers, sessions: sessions }
 end
