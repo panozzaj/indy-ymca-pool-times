@@ -249,12 +249,13 @@ col_width = 42
 if branch_names.size == 1
   # Single branch - original format
   branch_name = branch_names.first
-  puts "=== #{branch_name} ==="
+  total_width = 40
 
   all_days.each do |day|
     items = all_branches[branch_name][:schedule][day] || []
-    puts "\n#{day}"
-    puts "-" * 40
+    puts "\n\e[1;97m#{day.center(total_width)}\e[0m"
+    puts branch_name.center(total_width)
+    puts "-" * total_width
 
     if options[:histogram]
       # Build hourly lane availability (5am to 9pm)
@@ -300,11 +301,13 @@ if branch_names.size == 1
   end
 else
   # Multiple branches - side by side
-  all_days.each do |day|
-    puts "\n#{day}"
+  total_width = col_width * branch_names.size + (branch_names.size - 1) * 2  # account for "| " separators
 
-    # Print branch headers
-    header_line = branch_names.map { |name| name[0, col_width - 2].ljust(col_width) }.join("| ")
+  all_days.each do |day|
+    puts "\n\e[1;97m#{day.center(total_width)}\e[0m"
+
+    # Print branch headers (centered)
+    header_line = branch_names.map { |name| name[0, col_width - 2].center(col_width) }.join("| ")
     puts header_line
     puts branch_names.map { "-" * col_width }.join("+ ")
 
