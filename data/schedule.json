@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-03T09:08:55Z",
+  "generated_at": "2025-12-04T09:08:48Z",
   "days": [
     "2025-11-30",
     "2025-12-01",
@@ -2498,7 +2498,7 @@
           },
           {
             "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
+            "end_time": "6:45 PM",
             "lanes": "1 lane"
           }
         ],
@@ -2600,7 +2600,7 @@
           },
           {
             "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
+            "end_time": "6:45 PM",
             "lanes": "1 lane"
           }
         ],
@@ -2702,7 +2702,7 @@
           },
           {
             "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
+            "end_time": "6:45 PM",
             "lanes": "1 lane"
           }
         ],
