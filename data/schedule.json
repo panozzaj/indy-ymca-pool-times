@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-08T09:10:05Z",
+  "generated_at": "2025-12-09T09:08:36Z",
   "days": [
     "2025-12-07",
     "2025-12-08",
@@ -1297,65 +1297,6 @@
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
             "lanes": "2-6 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:00 AM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "8:45 AM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "10:15 AM",
-            "end_time": "12:00 PM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "6 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:00 AM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "12:00 PM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "6 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
           }
         ],
         "2025-12-26": [
