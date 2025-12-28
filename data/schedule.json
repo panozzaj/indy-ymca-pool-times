@@ -1,13 +1,6 @@
 {
-  "generated_at": "2025-12-27T09:06:58Z",
+  "generated_at": "2025-12-28T09:06:50Z",
   "days": [
-    "2025-12-21",
-    "2025-12-22",
-    "2025-12-23",
-    "2025-12-24",
-    "2025-12-25",
-    "2025-12-26",
-    "2025-12-27",
     "2025-12-28",
     "2025-12-29",
     "2025-12-30",
@@ -21,7 +14,14 @@
     "2026-01-07",
     "2026-01-08",
     "2026-01-09",
-    "2026-01-10"
+    "2026-01-10",
+    "2026-01-11",
+    "2026-01-12",
+    "2026-01-13",
+    "2026-01-14",
+    "2026-01-15",
+    "2026-01-16",
+    "2026-01-17"
   ],
   "branches": [
     {
@@ -29,13 +29,6 @@
       "name": "Ascension St. Vincent in Westfield",
       "id": 40,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -49,128 +42,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-21": [
-          {
-            "start_time": "11:30 AM",
-            "end_time": "2:30 PM",
-            "lanes": "10 lanes"
-          }
-        ],
-        "2025-12-22": [
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "8:00 PM",
-            "end_time": "8:45 PM",
-            "lanes": "10 lanes"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "8:00 PM",
-            "end_time": "8:45 PM",
-            "lanes": "10 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "8:00 PM",
-            "end_time": "8:45 PM",
-            "lanes": "10 lanes"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "8:00 PM",
-            "end_time": "8:45 PM",
-            "lanes": "10 lanes"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "10 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "11:00 AM",
-            "end_time": "6:45 PM",
-            "lanes": "10 lanes"
-          }
-        ],
         "2025-12-28": [
           {
             "start_time": "11:30 AM",
@@ -251,13 +132,6 @@
       "name": "Avondale Meadows",
       "id": 22,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -271,7 +145,14 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
       }
@@ -281,13 +162,6 @@
       "name": "Baxter",
       "id": 30,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -301,106 +175,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "11:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "11:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:00 AM",
-            "end_time": "8:30 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "1:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:15 AM",
@@ -594,6 +378,103 @@
             "end_time": "5:00 PM",
             "lanes": "2 lanes"
           }
+        ],
+        "2026-01-12": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-13": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "11:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-14": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-15": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "11:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-16": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-17": [
+          {
+            "start_time": "7:00 AM",
+            "end_time": "8:30 AM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "1:00 PM",
+            "end_time": "5:00 PM",
+            "lanes": "2 lanes"
+          }
         ]
       }
     },
@@ -602,13 +483,6 @@
       "name": "Benjamin Harrison",
       "id": 20,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -622,7 +496,14 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
       }
@@ -632,13 +513,6 @@
       "name": "Fishers",
       "id": 16,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -652,149 +526,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-21": [
-          {
-            "start_time": "12:00 PM",
-            "end_time": "4:00 PM",
-            "lanes": "7 lanes"
-          }
-        ],
-        "2025-12-22": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:00 AM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "8:45 AM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "10:15 AM",
-            "end_time": "12:00 PM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "6 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:15 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "6:15 PM",
-            "end_time": "8:00 PM",
-            "lanes": "3 lanes"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:00 AM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "8:45 AM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "8:45 AM",
-            "end_time": "10:15 AM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "10:15 AM",
-            "end_time": "12:00 PM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "6 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2-3 lanes"
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2-6 lanes"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:00 AM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "8:45 AM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "10:15 AM",
-            "end_time": "12:00 PM",
-            "lanes": "4-6 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "6 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "7 lanes"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:00 AM",
-            "end_time": "7:45 AM",
-            "lanes": "7 lanes"
-          },
-          {
-            "start_time": "7:45 AM",
-            "end_time": "12:15 PM",
-            "lanes": "3-4 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "6-7 lanes"
-          },
-          {
-            "start_time": "1:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "7 lanes"
-          }
-        ],
         "2025-12-28": [
           {
             "start_time": "12:00 PM",
@@ -1172,6 +913,205 @@
             "end_time": "5:00 PM",
             "lanes": "7 lanes"
           }
+        ],
+        "2026-01-11": [
+          {
+            "start_time": "12:00 PM",
+            "end_time": "4:00 PM",
+            "lanes": "7 lanes"
+          }
+        ],
+        "2026-01-12": [
+          {
+            "start_time": "5:00 AM",
+            "end_time": "7:00 AM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "7:00 AM",
+            "end_time": "8:45 AM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "10:15 AM",
+            "end_time": "12:00 PM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "6 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:15 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "6:15 PM",
+            "end_time": "8:00 PM",
+            "lanes": "3 lanes"
+          }
+        ],
+        "2026-01-13": [
+          {
+            "start_time": "5:00 AM",
+            "end_time": "7:00 AM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "7:00 AM",
+            "end_time": "8:45 AM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "8:45 AM",
+            "end_time": "10:15 AM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "10:15 AM",
+            "end_time": "12:00 PM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "6 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "2-3 lanes"
+          },
+          {
+            "start_time": "6:00 PM",
+            "end_time": "7:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2-6 lanes"
+          }
+        ],
+        "2026-01-14": [
+          {
+            "start_time": "5:00 AM",
+            "end_time": "7:00 AM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "7:00 AM",
+            "end_time": "8:45 AM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "10:15 AM",
+            "end_time": "12:00 PM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "6 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "7:00 PM",
+            "lanes": "3 lanes"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "4 lanes"
+          }
+        ],
+        "2026-01-15": [
+          {
+            "start_time": "5:00 AM",
+            "end_time": "7:00 AM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "7:00 AM",
+            "end_time": "12:00 PM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "6 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "7:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "4 lanes"
+          }
+        ],
+        "2026-01-16": [
+          {
+            "start_time": "5:00 AM",
+            "end_time": "7:00 AM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "7:00 AM",
+            "end_time": "8:45 AM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "10:15 AM",
+            "end_time": "12:00 PM",
+            "lanes": "4-6 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "6 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "5:00 PM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "5:00 PM",
+            "end_time": "7:00 PM",
+            "lanes": "4 lanes"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "7 lanes"
+          }
+        ],
+        "2026-01-17": [
+          {
+            "start_time": "7:00 AM",
+            "end_time": "7:45 AM",
+            "lanes": "7 lanes"
+          },
+          {
+            "start_time": "7:45 AM",
+            "end_time": "12:15 PM",
+            "lanes": "3-4 lanes"
+          },
+          {
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "lanes": "6-7 lanes"
+          },
+          {
+            "start_time": "1:00 PM",
+            "end_time": "5:00 PM",
+            "lanes": "7 lanes"
+          }
         ]
       }
     },
@@ -1180,13 +1120,6 @@
       "name": "Hendricks Regional Health",
       "id": 26,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -1200,206 +1133,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "10:00 AM",
-            "end_time": "10:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "4:55 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "5:30 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "5:30 PM",
-            "end_time": "6:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:00 PM",
-            "lanes": "Lap Lane Swim"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "8:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "10:00 AM",
-            "end_time": "10:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "11:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "4:45 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "3 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "10:00 AM",
-            "end_time": "10:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "4:55 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:00 PM",
-            "lanes": "Lap Lane Swim"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "8:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "10:00 AM",
-            "end_time": "11:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "11:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "4:45 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "7:30 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:00 PM",
-            "lanes": "Lap Lane Swim"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "7:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "8:55 AM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "10:00 AM",
-            "end_time": "10:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "4:55 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "7:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "3 lanes"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:00 AM",
-            "end_time": "7:55 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "8:55 AM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "1:00 PM",
-            "end_time": "3:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "3:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "Lap Lane Swim"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:00 AM",
@@ -1508,13 +1251,6 @@
       "name": "Irsay",
       "id": 24,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -1528,116 +1264,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "10:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "7:15 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "10:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "5:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "7:15 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:15 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "11:00 AM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "11:00 AM",
-            "end_time": "5:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:15 AM",
@@ -1696,13 +1332,6 @@
       "name": "Jordan",
       "id": 34,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -1716,96 +1345,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "8:00 AM",
-            "end_time": "9:00 AM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "6:45 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:00 AM",
-            "end_time": "8:00 AM",
-            "lanes": "Lap Lane Swim"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:15 AM",
@@ -2004,6 +1553,108 @@
             "end_time": "5:00 PM",
             "lanes": "1 lane"
           }
+        ],
+        "2026-01-12": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "Lap Lane Swim"
+          },
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "1 lane"
+          }
+        ],
+        "2026-01-13": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "Lap Lane Swim"
+          },
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "1 lane"
+          }
+        ],
+        "2026-01-14": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "Lap Lane Swim"
+          },
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "1 lane"
+          }
+        ],
+        "2026-01-15": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "Lap Lane Swim"
+          },
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "1 lane"
+          }
+        ],
+        "2026-01-16": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "8:00 AM",
+            "lanes": "Lap Lane Swim"
+          },
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "1 lane"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "6:45 PM",
+            "lanes": "1 lane"
+          }
+        ],
+        "2026-01-17": [
+          {
+            "start_time": "7:00 AM",
+            "end_time": "8:00 AM",
+            "lanes": "Lap Lane Swim"
+          },
+          {
+            "start_time": "8:00 AM",
+            "end_time": "5:00 PM",
+            "lanes": "1 lane"
+          }
         ]
       }
     },
@@ -2012,13 +1663,6 @@
       "name": "OrthoIndy Foundation",
       "id": 36,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -2032,166 +1676,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "6:30 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "7:30 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:30 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "6:30 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "7:30 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:30 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "6:30 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "7:30 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:30 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "6:30 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "7:30 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:30 PM",
-            "end_time": "8:30 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "6:30 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "7:00 AM",
-            "end_time": "10:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "10:00 AM",
-            "end_time": "11:15 AM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "11:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:30 PM",
-            "lanes": "4 lanes"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:15 AM",
-            "end_time": "8:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "8:00 AM",
-            "end_time": "9:00 AM",
-            "lanes": "3 lanes"
-          },
-          {
-            "start_time": "9:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "1 lane"
-          },
-          {
-            "start_time": "1:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "4 lanes"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:15 AM",
@@ -2307,13 +1801,6 @@
       "name": "Ransburg",
       "id": 32,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -2327,81 +1814,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "11:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "12:00 PM",
-            "end_time": "1:00 PM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "9:00 AM",
-            "lanes": "4 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "12:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "1 lane"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:15 AM",
@@ -2450,13 +1872,6 @@
       "name": "Witham",
       "id": 18,
       "days": [
-        "2025-12-21",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-25",
-        "2025-12-26",
-        "2025-12-27",
         "2025-12-28",
         "2025-12-29",
         "2025-12-30",
@@ -2470,86 +1885,16 @@
         "2026-01-07",
         "2026-01-08",
         "2026-01-09",
-        "2026-01-10"
+        "2026-01-10",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-17"
       ],
       "schedule": {
-        "2025-12-22": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-23": [
-          {
-            "start_time": "8:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-24": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "5:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-25": [
-          {
-            "start_time": "8:00 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-26": [
-          {
-            "start_time": "5:15 AM",
-            "end_time": "1:00 PM",
-            "lanes": "2 lanes"
-          },
-          {
-            "start_time": "4:00 PM",
-            "end_time": "8:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
-        "2025-12-27": [
-          {
-            "start_time": "7:00 AM",
-            "end_time": "5:00 PM",
-            "lanes": "2 lanes"
-          }
-        ],
         "2025-12-29": [
           {
             "start_time": "5:15 AM",
@@ -2698,6 +2043,83 @@
           }
         ],
         "2026-01-10": [
+          {
+            "start_time": "7:00 AM",
+            "end_time": "5:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-12": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "5:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-13": [
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-14": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "5:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "7:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-15": [
+          {
+            "start_time": "8:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-16": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "1:00 PM",
+            "lanes": "2 lanes"
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "lanes": "2 lanes"
+          }
+        ],
+        "2026-01-17": [
           {
             "start_time": "7:00 AM",
             "end_time": "5:00 PM",
