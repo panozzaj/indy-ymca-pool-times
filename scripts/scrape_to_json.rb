@@ -108,13 +108,39 @@ end
 # Fetch Y360 data from indymca.org
 def fetch_y360_data
   url = "https://indymca.org/fishers/"
-  html = `curl -sL '#{url}'`
+  puts "  Fetching #{url}..."
+
+  # Use curl with verbose error output
+  html = `curl -sL --fail --max-time 30 '#{url}' 2>&1`
+  curl_status = $?.exitstatus
+
+  if curl_status != 0
+    puts "  ERROR: curl failed with exit code #{curl_status}"
+    puts "  Response (first 500 chars): #{html[0, 500]}"
+    return nil
+  end
+
+  puts "  Received #{html.bytesize} bytes"
 
   # Extract y360-data JSON from HTML
   match = html.match(/<script type="application\/json" class="y360-data">(.+?)<\/script>/m)
-  return nil unless match
+  unless match
+    puts "  ERROR: Could not find y360-data script tag in HTML"
+    puts "  HTML contains 'y360-data': #{html.include?('y360-data')}"
+    puts "  HTML preview (first 1000 chars): #{html[0, 1000]}"
+    return nil
+  end
 
-  JSON.parse(match[1])
+  json_str = match[1]
+  puts "  Extracted #{json_str.bytesize} bytes of JSON"
+
+  begin
+    JSON.parse(json_str)
+  rescue JSON::ParserError => e
+    puts "  ERROR: Failed to parse JSON: #{e.message}"
+    puts "  JSON preview (first 500 chars): #{json_str[0, 500]}"
+    nil
+  end
 end
 
 # Extract lap swim sessions from Y360 data
