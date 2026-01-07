@@ -5,13 +5,6 @@
 # Run with: ruby scripts/scrape_to_json.rb
 # Output: data/schedule.json
 
-require "bundler/inline"
-
-gemfile do
-  source "https://rubygems.org"
-  gem "nokogiri"
-end
-
 require "net/http"
 require "uri"
 require "optparse"
