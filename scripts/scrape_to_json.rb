@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# Scrapes all YMCA branch pool schedules and outputs JSON for the static website.
+# Scrapes all YMCA branch pool schedules from Y360 data and outputs JSON for the static website.
 # Run with: ruby scripts/scrape_to_json.rb
 # Output: data/schedule.json
 
@@ -19,21 +19,59 @@ require "time"
 require "json"
 require "date"
 
-WEEKS_TO_FETCH = 3
-
+# Branch definitions: key => { source_name (from indymca.org), display_name (for our site) }
 BRANCHES = {
-  "westfield" => { id: 40, name: "Ascension St. Vincent in Westfield" },
-  "avondale" => { id: 22, name: "Avondale Meadows" },
-  "baxter" => { id: 30, name: "Baxter" },
-  "benjamin" => { id: 20, name: "Benjamin Harrison" },
-  "fishers" => { id: 16, name: "Fishers" },
-  "hendricks" => { id: 26, name: "Hendricks Regional Health" },
-  "irsay" => { id: 24, name: "Irsay" },
-  "jordan" => { id: 34, name: "Jordan" },
-  "orthoindy" => { id: 36, name: "OrthoIndy Foundation" },
-  "ransburg" => { id: 32, name: "Ransburg" },
-  "witham" => { id: 18, name: "Witham" }
+  "westfield" => {
+    source_name: "Ascension St. Vincent YMCA in Westfield",
+    display_name: "Ascension St. Vincent in Westfield"
+  },
+  "avondale" => {
+    source_name: "Avondale Meadows YMCA",
+    display_name: "Avondale Meadows"
+  },
+  "baxter" => {
+    source_name: "Baxter YMCA",
+    display_name: "Baxter"
+  },
+  "benjamin" => {
+    source_name: "Benjamin Harrison YMCA",
+    display_name: "Benjamin Harrison"
+  },
+  "fishers" => {
+    source_name: "Fishers YMCA",
+    display_name: "Fishers"
+  },
+  "hendricks" => {
+    source_name: "Hendricks Regional Health YMCA",
+    display_name: "Hendricks Regional Health"
+  },
+  "irsay" => {
+    source_name: "Irsay Family YMCA at CityWay",
+    display_name: "Irsay"
+  },
+  "jordan" => {
+    source_name: "Jordan YMCA",
+    display_name: "Jordan"
+  },
+  "orthoindy" => {
+    source_name: "OrthoIndy Foundation YMCA",
+    display_name: "OrthoIndy Foundation"
+  },
+  "ransburg" => {
+    source_name: "Ransburg YMCA",
+    display_name: "Ransburg"
+  },
+  "witham" => {
+    source_name: "Witham Family YMCA",
+    display_name: "Witham"
+  }
 }.freeze
+
+# Reverse lookup: source name => our key
+SOURCE_NAME_TO_KEY = BRANCHES.transform_values { |v| v[:source_name] }.invert.freeze
+
+# Pool schedule types that count as lap swim
+LAP_SWIM_TYPES = ["Lap Lane Swim", "Open Swim"].freeze
 
 options = { dry_run: false, output: "data/schedule.json" }
 
@@ -54,199 +92,158 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-def parse_duration_minutes(duration_str)
-  return 60 if duration_str.nil? || duration_str.empty?
-
-  if duration_str =~ /([\d.]+)\s*hr/
-    (Regexp.last_match(1).to_f * 60).to_i
-  elsif duration_str =~ /(\d+)\s*min/
-    Regexp.last_match(1).to_i
-  else
-    60
-  end
+# Convert UTC ISO timestamp to Eastern time, handling DST correctly
+def utc_to_eastern(iso_str)
+  # Parse as UTC, convert to Eastern using TZ
+  utc_time = Time.parse(iso_str)
+  ENV["TZ"] = "America/Indiana/Indianapolis"
+  eastern_time = utc_time.localtime
+  ENV["TZ"] = nil
+  eastern_time
 end
 
-def format_time(time_str)
-  time_str.gsub(/\s+/, " ").strip
+# Convert UTC ISO timestamp to Eastern time formatted string
+def utc_to_eastern_time(iso_str)
+  utc_to_eastern(iso_str).strftime("%I:%M %p").sub(/^0/, "")
 end
 
-# Standardize lane text to "X lane" or "X lanes" format
-def standardize_lanes(lanes_str)
-  return lanes_str if lanes_str.nil? || lanes_str.empty?
-
-  # Extract number or range (e.g., "4-6", "7", "2-3")
-  if lanes_str =~ /(\d+(?:-\d+)?)/
-    count = Regexp.last_match(1)
-    # Use singular for "1", plural otherwise
-    suffix = count == "1" ? "lane" : "lanes"
-    "#{count} #{suffix}"
-  else
-    # No number found, return original (e.g., "Lap Lane Swim")
-    lanes_str
-  end
+# Convert UTC ISO timestamp to Eastern date (ISO format)
+def utc_to_eastern_date(iso_str)
+  utc_to_eastern(iso_str).strftime("%Y-%m-%d")
 end
 
-def normalize_time(time_str)
-  Time.parse(time_str).strftime("%I:%M %p").sub(/^0/, "")
+# Fetch Y360 data from indymca.org
+def fetch_y360_data
+  url = "https://indymca.org/fishers/"
+  html = `curl -sL '#{url}'`
+
+  # Extract y360-data JSON from HTML
+  match = html.match(/<script type="application\/json" class="y360-data">(.+?)<\/script>/m)
+  return nil unless match
+
+  JSON.parse(match[1])
 end
 
-def calculate_end_time(start_time_str, duration_str)
-  start = Time.parse(start_time_str)
-  minutes = parse_duration_minutes(duration_str)
-  end_time = start + (minutes * 60)
-  end_time.strftime("%I:%M %p").sub(/^0/, "")
-end
+# Extract lap swim sessions from Y360 data
+def extract_lap_swim_sessions(y360_data)
+  sessions_by_branch = Hash.new { |h, k| h[k] = [] }
 
-# Get the Sunday of the current week
-def current_week_sunday
-  today = Date.today
-  today - today.wday
-end
+  y360_data["apiSchedules"].each do |_date, day_data|
+    day_data["items"].each do |item|
+      branch_name = item["branch_name"]
+      schedule_name = item["schedule_name"]
+      title = item["title"]
 
-# Convert "Mon 12/01" to ISO date "2024-12-01"
-def parse_day_to_iso(day_str)
-  return nil unless day_str =~ /(\d+)\/(\d+)/
+      next unless branch_name
+      next unless schedule_name == "Pools Schedules"
+      next unless LAP_SWIM_TYPES.include?(title)
 
-  month = Regexp.last_match(1).to_i
-  day = Regexp.last_match(2).to_i
-  today = Date.today
-  year = month < today.month - 6 ? today.year + 1 : today.year
-  Date.new(year, month, day).iso8601
-end
+      branch_key = SOURCE_NAME_TO_KEY[branch_name]
+      next unless branch_key
 
-# Generate Sunday dates for weeks to fetch
-def week_sundays
-  base = current_week_sunday
-  WEEKS_TO_FETCH.times.map { |i| base + (i * 7) }
-end
+      # Convert UTC to Eastern
+      start_date = utc_to_eastern_date(item["start_at"])
+      start_time = utc_to_eastern_time(item["start_at"])
+      end_time = utc_to_eastern_time(item["end_at"])
 
-def fetch_week_schedule(branch_id, week_date)
-  params = {
-    BranchID: branch_id,
-    search: "pool time",
-    date: week_date.strftime("%Y-%m-%d")
-  }
-  url = "https://indy.recliquecore.com/classes/printer_friendly/?#{URI.encode_www_form(params)}"
-  html = `curl -s '#{url}'`
-  return { days: [], sessions: [] } if html.empty?
-
-  doc = Nokogiri::HTML(html)
-
-  date_headers = doc.css("table#week_classes thead th").map(&:text).map(&:strip).reject(&:empty?)
-  date_headers.reject! { |h| h.downcase.include?("time") }
-
-  sessions = []
-  doc.css("tbody#non-condensed tr").each do |row|
-    cells = row.css("td")
-    next if cells.empty?
-
-    cells.each_with_index do |cell, day_index|
-      next if day_index >= date_headers.length
-
-      cell.css("div.item").each do |item|
-        time_el = item.at_css("span.c-time")
-        next unless time_el
-
-        raw_time = format_time(time_el.text)
-        start_time = normalize_time(raw_time)
-        category = item.at_css("div.category")&.text&.strip || ""
-        label = item.at_css("div.label")&.text&.strip || ""
-        name = [category, label].reject(&:empty?).join(" - ")
-        name = "Unknown" if name.empty?
-
-        duration_str = item.at_css("span.duration")&.text&.strip&.gsub(/[()]/, "") || ""
-        end_time = calculate_end_time(raw_time, duration_str)
-
-        iso_day = parse_day_to_iso(date_headers[day_index])
-        next unless iso_day
-
-        sessions << {
-          day: iso_day,
-          start_time: start_time,
-          end_time: end_time,
-          name: name
-        }
-      end
+      sessions_by_branch[branch_key] << {
+        day: start_date,
+        start_time: start_time,
+        end_time: end_time,
+        studio: item["studio_name"] || ""
+      }
     end
   end
 
-  sessions.select! { |s| s[:name].start_with?("Lap Lane Swim") }
-  sessions.each { |s| s[:lanes] = standardize_lanes(s[:name].sub("Lap Lane Swim - ", "")) }
-
-  iso_days = date_headers.map { |d| parse_day_to_iso(d) }.compact
-  { days: iso_days, sessions: sessions }
+  sessions_by_branch
 end
 
-def fetch_branch_schedule(branch_id, branch_key, branch_name)
-  all_days = []
-  all_sessions = []
+# Merge overlapping or adjacent sessions
+def merge_sessions(sessions)
+  return [] if sessions.empty?
 
-  week_sundays.each do |sunday|
-    result = fetch_week_schedule(branch_id, sunday)
-    all_days.concat(result[:days])
-    all_sessions.concat(result[:sessions])
-  end
+  # Sort by start time
+  sorted = sessions.sort_by { |s| Time.parse(s[:start_time]) }
 
-  all_days.uniq!
-
-  # Sort sessions by day and time
-  day_order = all_days.each_with_index.to_h
-  all_sessions.sort_by! { |s| [day_order[s[:day]] || 99, Time.parse(s[:start_time])] }
-
-  {
-    key: branch_key,
-    name: branch_name,
-    id: branch_id,
-    days: all_days,
-    schedule: all_sessions.group_by { |s| s[:day] }.transform_values do |items|
-      merge_items(items).map do |item|
-        {
-          start_time: item[:start_time],
-          end_time: item[:end_time],
-          lanes: item[:lanes]
-        }
-      end
-    end
-  }
-end
-
-# Normalize lane text for comparison (e.g., "10 Lanes" vs "10 lane" -> "10")
-def normalize_lanes(lanes)
-  lanes[/\d+/] || lanes.downcase
-end
-
-def merge_items(items)
-  merged = []
-  items.each do |item|
+  merged = [sorted.first.dup]
+  sorted[1..].each do |session|
     prev = merged.last
-    if prev && normalize_lanes(prev[:lanes]) == normalize_lanes(item[:lanes]) && prev[:end_time] == item[:start_time]
-      prev[:end_time] = item[:end_time]
+    prev_end = Time.parse(prev[:end_time])
+    curr_start = Time.parse(session[:start_time])
+    curr_end = Time.parse(session[:end_time])
+
+    # If current session starts before or at previous end, merge them
+    if curr_start <= prev_end
+      # Extend end time if current ends later
+      prev[:end_time] = session[:end_time] if curr_end > prev_end
     else
-      merged << item.dup
+      merged << session.dup
     end
   end
   merged
 end
 
-# Fetch all branches
-puts "Fetching schedules for #{BRANCHES.size} branches (#{WEEKS_TO_FETCH} weeks each)..."
+# Build branch schedule data
+def build_branch_data(branch_key, sessions)
+  # Sort by day and start time
+  sessions.sort_by! { |s| [s[:day], Time.parse(s[:start_time])] }
+
+  days = sessions.map { |s| s[:day] }.uniq.sort
+
+  schedule = sessions.group_by { |s| s[:day] }.transform_values do |day_sessions|
+    merge_sessions(day_sessions).map do |s|
+      {
+        start_time: s[:start_time],
+        end_time: s[:end_time],
+        lanes: "" # Y360 doesn't provide lane counts
+      }
+    end
+  end
+
+  {
+    key: branch_key,
+    name: BRANCHES[branch_key][:display_name],
+    days: days,
+    schedule: schedule
+  }
+end
+
+# Main execution
+puts "Fetching Y360 schedule data from indymca.org..."
+y360_data = fetch_y360_data
+
+if y360_data.nil?
+  puts "ERROR: Failed to fetch Y360 data"
+  exit 1
+end
+
+dates_available = y360_data["apiSchedules"].keys.sort
+puts "  Found data for #{dates_available.length} days: #{dates_available.first} to #{dates_available.last}"
+
+sessions_by_branch = extract_lap_swim_sessions(y360_data)
+puts "  Found lap swim sessions for #{sessions_by_branch.keys.length} branches"
+
 branches_data = []
 all_days = []
 
-BRANCHES.each do |key, info|
-  print "  #{info[:name]}..."
-  data = fetch_branch_schedule(info[:id], key, info[:name])
-  if data
-    branches_data << data
-    all_days.concat(data[:days])
-    total_sessions = data[:schedule].values.flatten.size
-    puts " #{total_sessions} sessions"
-  else
-    puts " FAILED"
+BRANCHES.keys.each do |key|
+  sessions = sessions_by_branch[key] || []
+  print "  #{BRANCHES[key][:display_name]}..."
+
+  if sessions.empty?
+    puts " 0 sessions (no pool data)"
+    next
   end
+
+  data = build_branch_data(key, sessions)
+  branches_data << data
+  all_days.concat(data[:days])
+
+  total_sessions = data[:schedule].values.flatten.size
+  puts " #{total_sessions} sessions"
 end
 
-# Sort days chronologically (ISO dates sort naturally)
+# Sort days chronologically
 all_days = all_days.uniq.sort
 
 output = {

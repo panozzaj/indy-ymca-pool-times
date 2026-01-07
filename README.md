@@ -28,3 +28,7 @@ Select specific branches via query param:
 ```
 
 Branch keys: `westfield`, `avondale`, `baxter`, `benjamin`, `fishers`, `hendricks`, `irsay`, `jordan`, `orthoindy`, `ransburg`, `witham`
+
+## Notes
+
+**January 2026:** Lane count information (e.g., "10 lanes") is no longer available. The YMCA switched their schedule system to Y360, which doesn't expose lane availability data.
