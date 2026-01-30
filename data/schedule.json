@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-29T09:17:27Z",
+  "generated_at": "2026-01-30T09:15:54Z",
   "days": [
     "2026-01-29",
     "2026-01-30",
@@ -318,6 +318,11 @@
         ],
         "2026-01-30": [
           {
+            "start_time": "5:00 AM",
+            "end_time": "7:00 AM",
+            "lanes": ""
+          },
+          {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "lanes": ""
@@ -339,12 +344,17 @@
         ],
         "2026-02-02": [
           {
-            "start_time": "9:00 AM",
-            "end_time": "12:00 PM",
+            "start_time": "5:00 AM",
+            "end_time": "8:45 AM",
             "lanes": ""
           },
           {
-            "start_time": "6:00 PM",
+            "start_time": "9:00 AM",
+            "end_time": "1:00 PM",
+            "lanes": ""
+          },
+          {
+            "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "lanes": ""
           }
