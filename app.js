@@ -175,14 +175,26 @@ function isDayTodayOrFuture(isoDate) {
   return dayDate >= today;
 }
 
-// Build URL to original YMCA schedule page
-function buildSourceUrl(branchId, isoDate) {
-  const params = new URLSearchParams({
-    BranchID: branchId,
-    search: 'pool time',
-    date: isoDate
-  });
-  return `https://indy.recliquecore.com/classes/printer_friendly/?${params}`;
+// Map branch keys to indymca.org URL slugs
+const BRANCH_URL_SLUGS = {
+  'westfield': 'ymca-westfield',
+  'avondale': 'avondale-meadows',
+  'baxter': 'baxter',
+  'benjamin': 'benjamin-harrison',
+  'fishers': 'fishers',
+  'hendricks': 'hendricks-regional-health',
+  'irsay': 'cityway',
+  'jordan': 'jordan',
+  'orthoindy': 'orthoindy-foundation',
+  'ransburg': 'ransburg',
+  'witham': 'witham'
+};
+
+// Build URL to YMCA branch page
+function buildSourceUrl(branchKey) {
+  const slug = BRANCH_URL_SLUGS[branchKey];
+  if (!slug) return null;
+  return `https://indymca.org/${slug}/`;
 }
 
 // Parse time string to minutes since midnight for comparison
@@ -262,7 +274,7 @@ function renderSchedule() {
       const sessions = getSessionsWithGaps(rawSessions);
       const branchInfo = branchData.find(b => b.key === branch.key);
       const areaText = branchInfo?.area ? ` (${branchInfo.area})` : '';
-      const sourceUrl = buildSourceUrl(branch.id, day);
+      const sourceUrl = buildSourceUrl(branch.key);
 
       html += `<div class="branch-column">`;
       if (sourceUrl) {
