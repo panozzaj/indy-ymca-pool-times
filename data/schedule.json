@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-27T09:17:36Z",
+  "generated_at": "2026-02-28T09:09:15Z",
   "days": [
     "2026-02-27",
     "2026-02-28",
@@ -77,11 +77,6 @@
           {
             "start_time": "9:00 AM",
             "end_time": "1:00 PM",
-            "lanes": ""
-          },
-          {
-            "start_time": "6:00 PM",
-            "end_time": "8:45 PM",
             "lanes": ""
           }
         ],
@@ -453,7 +448,7 @@
             "lanes": ""
           },
           {
-            "start_time": "5:30 PM",
+            "start_time": "4:00 PM",
             "end_time": "6:30 PM",
             "lanes": ""
           },
@@ -470,8 +465,8 @@
             "lanes": ""
           },
           {
-            "start_time": "4:05 PM",
-            "end_time": "4:55 PM",
+            "start_time": "4:00 PM",
+            "end_time": "4:45 PM",
             "lanes": ""
           },
           {
@@ -497,6 +492,11 @@
             "lanes": ""
           },
           {
+            "start_time": "4:00 PM",
+            "end_time": "4:45 PM",
+            "lanes": ""
+          },
+          {
             "start_time": "7:00 PM",
             "end_time": "8:00 PM",
             "lanes": ""
@@ -505,12 +505,12 @@
         "2026-03-05": [
           {
             "start_time": "5:00 AM",
-            "end_time": "8:55 AM",
+            "end_time": "7:55 AM",
             "lanes": ""
           },
           {
-            "start_time": "10:30 AM",
-            "end_time": "1:00 PM",
+            "start_time": "10:00 AM",
+            "end_time": "10:55 AM",
             "lanes": ""
           },
           {
