@@ -201,6 +201,18 @@ footer {
   margin-right: auto;
 }
 
+.github-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.github-link:hover {
+  color: var(--text-color);
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   h1 {
