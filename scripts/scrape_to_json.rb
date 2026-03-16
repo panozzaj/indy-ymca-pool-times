@@ -105,42 +105,53 @@ def utc_to_eastern_date(iso_str)
   utc_to_eastern(iso_str).strftime("%Y-%m-%d")
 end
 
-# Fetch Y360 data from indymca.org
-def fetch_y360_data
+# Fetch Y360 data from indymca.org with retries
+def fetch_y360_data(max_retries: 3)
   url = "https://indymca.org/fishers/"
-  puts "  Fetching #{url}..."
 
-  # Use curl with verbose error output
-  html = `curl -sL --fail --max-time 30 '#{url}' 2>&1`
-  curl_status = $?.exitstatus
+  (1..max_retries).each do |attempt|
+    puts "  Fetching #{url} (attempt #{attempt}/#{max_retries})..."
 
-  if curl_status != 0
-    puts "  ERROR: curl failed with exit code #{curl_status}"
-    puts "  Response (first 500 chars): #{html[0, 500]}"
-    return nil
+    # Use curl with verbose error output
+    html = `curl -sL --fail --max-time 30 '#{url}' 2>&1`
+    curl_status = $?.exitstatus
+
+    if curl_status != 0
+      puts "  ERROR: curl failed with exit code #{curl_status}"
+      puts "  Response (first 500 chars): #{html[0, 500]}"
+      if attempt < max_retries
+        delay = attempt * 10
+        puts "  Retrying in #{delay}s..."
+        sleep delay
+      end
+      next
+    end
+
+    puts "  Received #{html.bytesize} bytes"
+
+    # Extract y360-data JSON from HTML
+    match = html.match(/<script type="application\/json" class="y360-data">(.+?)<\/script>/m)
+    unless match
+      puts "  ERROR: Could not find y360-data script tag in HTML"
+      puts "  HTML contains 'y360-data': #{html.include?('y360-data')}"
+      puts "  HTML preview (first 1000 chars): #{html[0, 1000]}"
+      return nil # Not a transient error — don't retry
+    end
+
+    json_str = match[1]
+    puts "  Extracted #{json_str.bytesize} bytes of JSON"
+
+    begin
+      return JSON.parse(json_str)
+    rescue JSON::ParserError => e
+      puts "  ERROR: Failed to parse JSON: #{e.message}"
+      puts "  JSON preview (first 500 chars): #{json_str[0, 500]}"
+      return nil # Not a transient error — don't retry
+    end
   end
 
-  puts "  Received #{html.bytesize} bytes"
-
-  # Extract y360-data JSON from HTML
-  match = html.match(/<script type="application\/json" class="y360-data">(.+?)<\/script>/m)
-  unless match
-    puts "  ERROR: Could not find y360-data script tag in HTML"
-    puts "  HTML contains 'y360-data': #{html.include?('y360-data')}"
-    puts "  HTML preview (first 1000 chars): #{html[0, 1000]}"
-    return nil
-  end
-
-  json_str = match[1]
-  puts "  Extracted #{json_str.bytesize} bytes of JSON"
-
-  begin
-    JSON.parse(json_str)
-  rescue JSON::ParserError => e
-    puts "  ERROR: Failed to parse JSON: #{e.message}"
-    puts "  JSON preview (first 500 chars): #{json_str[0, 500]}"
-    nil
-  end
+  puts "  All #{max_retries} attempts failed"
+  nil
 end
 
 # Extract lap swim sessions from Y360 data

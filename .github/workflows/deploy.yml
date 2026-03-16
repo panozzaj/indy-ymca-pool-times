@@ -57,14 +57,19 @@ jobs:
           ruby-version: '3.3'
 
       - name: Run scraper
+        id: scrape
         if: steps.check_scraper.outputs.needs_scrape == 'true'
+        continue-on-error: true
         run: |
           mkdir -p data
           ruby scripts/scrape_to_json.rb
 
       - name: Get existing data from gh-pages
-        if: steps.check_scraper.outputs.needs_scrape == 'false'
+        if: steps.check_scraper.outputs.needs_scrape == 'false' || steps.scrape.outcome == 'failure'
         run: |
+          if [[ "${{ steps.scrape.outcome }}" == "failure" ]]; then
+            echo "::warning::Scraper failed — falling back to existing data from gh-pages"
+          fi
           git fetch origin gh-pages || exit 0
           git checkout origin/gh-pages -- data/ 2>/dev/null || echo "No existing data on gh-pages"
 
