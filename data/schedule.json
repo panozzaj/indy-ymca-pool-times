@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T09:51:56Z",
+  "generated_at": "2026-05-07T09:53:51Z",
   "days": [
     "2026-05-06",
     "2026-05-07",
@@ -791,6 +791,11 @@
           },
           {
             "start_time": "4:00 PM",
+            "end_time": "5:45 PM",
+            "lanes": ""
+          },
+          {
+            "start_time": "7:30 PM",
             "end_time": "8:30 PM",
             "lanes": ""
           }
