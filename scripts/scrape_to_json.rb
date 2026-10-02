@@ -11,6 +11,7 @@ require "optparse"
 require "time"
 require "json"
 require "date"
+require "cgi/escape"
 
 # Branch definitions: key => { source_name (from indymca.org), display_name (for our site) }
 BRANCHES = {
@@ -65,25 +66,6 @@ SOURCE_NAME_TO_KEY = BRANCHES.transform_values { |v| v[:source_name] }.invert.fr
 
 # Pool schedule types that count as lap swim
 LAP_SWIM_TYPES = ["Lap Lane Swim", "Open Swim"].freeze
-
-options = { dry_run: false, output: "data/schedule.json" }
-
-OptionParser.new do |opts|
-  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
-
-  opts.on("--dry-run", "Preview without writing (default is to write)") do
-    options[:dry_run] = true
-  end
-
-  opts.on("-o", "--output FILE", "Output file path (default: data/schedule.json)") do |v|
-    options[:output] = v
-  end
-
-  opts.on("-h", "--help", "Show this help") do
-    puts opts
-    exit
-  end
-end.parse!
 
 # Convert UTC ISO timestamp to Eastern time, handling DST correctly
 def utc_to_eastern(iso_str)
@@ -154,38 +136,44 @@ def fetch_y360_data(max_retries: 3)
   nil
 end
 
-# Extract lap swim sessions from Y360 data
-def extract_lap_swim_sessions(y360_data)
-  sessions_by_branch = Hash.new { |h, k| h[k] = [] }
+# Clean up a free-text Y360 description (HTML entities, tags, decorative runs) for display
+def clean_description(desc)
+  text = desc.to_s.gsub(/<[^>]+>/, " ").gsub("&nbsp;", " ")
+  text = CGI.unescapeHTML(text).tr("\u00A0", " ")
+  text = text.gsub(/[*\-]{3,}/, " ").gsub(/\s+/, " ").strip
+  text.match?(/[[:alnum:]]/) ? text : ""
+end
+
+# Extract pool events from Y360 data, split into lap swim sessions and everything else
+# (classes, closures) so we can show what else is happening in the lap pool
+def extract_pool_events(y360_data)
+  events_by_branch = Hash.new { |h, k| h[k] = { lap: [], other: [] } }
 
   y360_data["apiSchedules"].each do |_date, day_data|
     day_data["items"].each do |item|
       branch_name = item["branch_name"]
-      schedule_name = item["schedule_name"]
-      title = item["title"]
-
       next unless branch_name
-      next unless schedule_name == "Pools Schedules"
-      next unless LAP_SWIM_TYPES.include?(title)
+      next unless item["schedule_name"] == "Pools Schedules"
 
       branch_key = SOURCE_NAME_TO_KEY[branch_name]
       next unless branch_key
 
-      # Convert UTC to Eastern
-      start_date = utc_to_eastern_date(item["start_at"])
-      start_time = utc_to_eastern_time(item["start_at"])
-      end_time = utc_to_eastern_time(item["end_at"])
+      title = item["title"]
+      kind = LAP_SWIM_TYPES.include?(title) ? :lap : :other
 
-      sessions_by_branch[branch_key] << {
-        day: start_date,
-        start_time: start_time,
-        end_time: end_time,
-        studio: item["studio_name"] || ""
+      # Convert UTC to Eastern
+      events_by_branch[branch_key][kind] << {
+        day: utc_to_eastern_date(item["start_at"]),
+        start_time: utc_to_eastern_time(item["start_at"]),
+        end_time: utc_to_eastern_time(item["end_at"]),
+        studio: item["studio_name"] || "",
+        title: title,
+        description: item["description"].to_s
       }
     end
   end
 
-  sessions_by_branch
+  events_by_branch
 end
 
 # Merge overlapping or adjacent sessions
@@ -195,7 +183,8 @@ def merge_sessions(sessions)
   # Sort by start time
   sorted = sessions.sort_by { |s| Time.parse(s[:start_time]) }
 
-  merged = [sorted.first.dup]
+  # Keep the original sessions in :parts so per-session notes and pools survive the merge
+  merged = [sorted.first.merge(parts: [sorted.first])]
   sorted[1..].each do |session|
     prev = merged.last
     prev_end = Time.parse(prev[:end_time])
@@ -206,28 +195,66 @@ def merge_sessions(sessions)
     if curr_start <= prev_end
       # Extend end time if current ends later
       prev[:end_time] = session[:end_time] if curr_end > prev_end
+      prev[:parts] << session
     else
-      merged << session.dup
+      merged << session.merge(parts: [session])
     end
   end
   merged
 end
 
+# Notes (e.g. "4 Lanes") from the sessions making up a merged window, with the time range
+# each applies to. Consecutive sessions with the same note are combined.
+def window_notes(parts)
+  notes = []
+  parts.sort_by { |p| Time.parse(p[:start_time]) }.each do |part|
+    text = clean_description(part[:description])
+    next if text.empty?
+
+    last = notes.last
+    if last && last[:text] == text
+      last[:end_time] = part[:end_time] if Time.parse(part[:end_time]) > Time.parse(last[:end_time])
+    else
+      notes << { start_time: part[:start_time], end_time: part[:end_time], text: text }
+    end
+  end
+  notes
+end
+
+# Non-lap-swim events that overlap one of the window's sessions in the same pool. Matching
+# per session matters because a window can merge lap swim from different pools.
+def window_classes(parts, day_others)
+  overlaps = lambda do |a, b|
+    Time.parse(a[:start_time]) < Time.parse(b[:end_time]) && Time.parse(a[:end_time]) > Time.parse(b[:start_time])
+  end
+
+  day_others
+    .select { |e| parts.any? { |p| p[:studio] == e[:studio] && overlaps.call(e, p) } }
+    .sort_by { |e| [Time.parse(e[:start_time]), e[:title]] }
+    .map { |e| { title: e[:title], start_time: e[:start_time], end_time: e[:end_time], studio: e[:studio] } }
+    .uniq
+end
+
 # Build branch schedule data
-def build_branch_data(branch_key, sessions)
+def build_branch_data(branch_key, sessions, others = [])
   # Sort by day and start time
   sessions.sort_by! { |s| [s[:day], Time.parse(s[:start_time])] }
 
   days = sessions.map { |s| s[:day] }.uniq.sort
+  others_by_day = others.group_by { |e| e[:day] }
 
-  schedule = sessions.group_by { |s| s[:day] }.transform_values do |day_sessions|
-    merge_sessions(day_sessions).map do |s|
+  schedule = sessions.group_by { |s| s[:day] }.to_h do |day, day_sessions|
+    windows = merge_sessions(day_sessions).map do |s|
+      studios = s[:parts].map { |p| p[:studio] }.uniq
       {
         start_time: s[:start_time],
         end_time: s[:end_time],
-        lanes: "" # Y360 doesn't provide lane counts
+        studios: studios,
+        notes: window_notes(s[:parts]),
+        classes: window_classes(s[:parts], others_by_day[day] || [])
       }
     end
+    [day, windows]
   end
 
   {
@@ -238,57 +265,79 @@ def build_branch_data(branch_key, sessions)
   }
 end
 
-# Main execution
-puts "Fetching Y360 schedule data from indymca.org..."
-y360_data = fetch_y360_data
+# Main execution (skipped when required by tests)
+if __FILE__ == $PROGRAM_NAME
+  options = { dry_run: false, output: "data/schedule.json" }
 
-if y360_data.nil?
-  puts "ERROR: Failed to fetch Y360 data"
-  exit 1
-end
+  OptionParser.new do |opts|
+    opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
 
-dates_available = y360_data["apiSchedules"].keys.sort
-puts "  Found data for #{dates_available.length} days: #{dates_available.first} to #{dates_available.last}"
+    opts.on("--dry-run", "Preview without writing (default is to write)") do
+      options[:dry_run] = true
+    end
 
-sessions_by_branch = extract_lap_swim_sessions(y360_data)
-puts "  Found lap swim sessions for #{sessions_by_branch.keys.length} branches"
+    opts.on("-o", "--output FILE", "Output file path (default: data/schedule.json)") do |v|
+      options[:output] = v
+    end
 
-branches_data = []
-all_days = []
+    opts.on("-h", "--help", "Show this help") do
+      puts opts
+      exit
+    end
+  end.parse!
 
-BRANCHES.keys.each do |key|
-  sessions = sessions_by_branch[key] || []
-  print "  #{BRANCHES[key][:display_name]}..."
+  puts "Fetching Y360 schedule data from indymca.org..."
+  y360_data = fetch_y360_data
 
-  if sessions.empty?
-    puts " 0 sessions (no pool data)"
-    next
+  if y360_data.nil?
+    puts "ERROR: Failed to fetch Y360 data"
+    exit 1
   end
 
-  data = build_branch_data(key, sessions)
-  branches_data << data
-  all_days.concat(data[:days])
+  dates_available = y360_data["apiSchedules"].keys.sort
+  puts "  Found data for #{dates_available.length} days: #{dates_available.first} to #{dates_available.last}"
 
-  total_sessions = data[:schedule].values.flatten.size
-  puts " #{total_sessions} sessions"
-end
+  events_by_branch = extract_pool_events(y360_data)
+  puts "  Found pool events for #{events_by_branch.keys.length} branches"
 
-# Sort days chronologically
-all_days = all_days.uniq.sort
+  branches_data = []
+  all_days = []
 
-output = {
-  generated_at: Time.now.utc.iso8601,
-  days: all_days,
-  branches: branches_data
-}
+  BRANCHES.keys.each do |key|
+    sessions = events_by_branch.key?(key) ? events_by_branch[key][:lap] : []
+    print "  #{BRANCHES[key][:display_name]}..."
 
-json = JSON.pretty_generate(output)
+    if sessions.empty?
+      puts " 0 sessions (no pool data)"
+      next
+    end
 
-if options[:dry_run]
-  puts "\n[DRY RUN] Would write #{json.bytesize} bytes to #{options[:output]}"
-  puts "\nPreview (first 2000 chars):"
-  puts json[0, 2000]
-else
-  File.write(options[:output], json)
-  puts "\nWrote #{json.bytesize} bytes to #{options[:output]}"
+    data = build_branch_data(key, sessions, events_by_branch[key][:other])
+    branches_data << data
+    all_days.concat(data[:days])
+
+    windows = data[:schedule].values.flatten
+    puts " #{windows.size} sessions, #{windows.sum { |w| w[:classes].size }} overlapping classes, " \
+         "#{windows.count { |w| w[:notes].any? }} with notes"
+  end
+
+  # Sort days chronologically
+  all_days = all_days.uniq.sort
+
+  output = {
+    generated_at: Time.now.utc.iso8601,
+    days: all_days,
+    branches: branches_data
+  }
+
+  json = JSON.pretty_generate(output)
+
+  if options[:dry_run]
+    puts "\n[DRY RUN] Would write #{json.bytesize} bytes to #{options[:output]}"
+    puts "\nPreview (first 2000 chars):"
+    puts json[0, 2000]
+  else
+    File.write(options[:output], json)
+    puts "\nWrote #{json.bytesize} bytes to #{options[:output]}"
+  end
 end

@@ -219,6 +219,40 @@ function minutesToTime(mins) {
   return `${hours}:${minutes.toString().padStart(2, '0')} ${period}`;
 }
 
+// Compact time range: "9:00 AM", "10:00 AM" -> "9-10 AM"; "11:30 AM", "12:30 PM" -> "11:30 AM-12:30 PM"
+function formatRange(start, end) {
+  const trim = t => t.replace(':00', '');
+  const [startTime, startPeriod] = trim(start).split(' ');
+  const [endTime, endPeriod] = trim(end).split(' ');
+  if (startPeriod === endPeriod) return `${startTime}\u2013${endTime} ${endPeriod}`;
+  return `${trim(start)}\u2013${trim(end)}`;
+}
+
+function escapeHtml(text) {
+  return text.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// Notes from the YMCA (e.g. "4 Lanes"); prefix with a time range when a note covers only part of the session
+function renderNotes(session) {
+  return (session.notes || []).map(note => {
+    const coversSession = note.start_time === session.start_time && note.end_time === session.end_time;
+    const range = coversSession ? '' : `<span class="note-range">${formatRange(note.start_time, note.end_time)}:</span> `;
+    return `<span class="note">${range}${escapeHtml(note.text)}</span>`;
+  }).join('');
+}
+
+// Classes or closures in the lap pool during this session
+function renderClasses(session) {
+  const classes = session.classes || [];
+  if (classes.length === 0) return '';
+  const showPool = (session.studios || []).length > 1;
+  const items = classes.map(c => {
+    const pool = showPool ? ` <span class="class-pool">(${escapeHtml(c.studio)})</span>` : '';
+    return `<li class="pool-class"><span class="class-time">${formatRange(c.start_time, c.end_time)}</span> ${escapeHtml(c.title)}${pool}</li>`;
+  }).join('');
+  return `<ul class="pool-classes">${items}</ul>`;
+}
+
 // Get sessions with gaps (closed times) inserted
 function getSessionsWithGaps(sessions) {
   if (!sessions || sessions.length === 0) return [];
@@ -235,7 +269,6 @@ function getSessionsWithGaps(sessions) {
         result.push({
           start_time: minutesToTime(prevEnd),
           end_time: minutesToTime(currStart),
-          lanes: null,
           isClosed: true
         });
       }
@@ -297,7 +330,8 @@ function renderSchedule() {
           } else {
             html += `<li class="session">
               <span class="time">${session.start_time} - ${session.end_time}</span>
-              <span class="lanes">${session.lanes}</span>
+              ${renderNotes(session)}
+              ${renderClasses(session)}
             </li>`;
           }
         });

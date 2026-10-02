@@ -31,4 +31,6 @@ Branch keys: `westfield`, `avondale`, `baxter`, `benjamin`, `fishers`, `hendrick
 
 ## Notes
 
-**January 2026:** Lane count information (e.g., "10 lanes") is no longer available. The YMCA switched their schedule system to Y360, which doesn't expose lane availability data.
+**January 2026:** Lane count information (e.g., "10 lanes") is no longer available as structured data. The YMCA switched their schedule system to Y360, which doesn't expose lane availability data.
+
+**Lap pool notes and classes:** Some branches put lane counts in the free-text description of lap swim events (e.g. "4 Lanes", "3 lanes available"), so each lap swim session shows those notes with the time range they apply to. Each session also lists other pool events (water fitness classes, lessons, closures) in the same pool that overlap it, since those take up lanes.
