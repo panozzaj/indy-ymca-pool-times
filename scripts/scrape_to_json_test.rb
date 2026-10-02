@@ -224,6 +224,20 @@ class ExtractPoolEventsTest < Minitest::Test
     assert_equal "9:00 AM", result["fishers"][:lap].first[:start_time]
     assert_equal ["Shallow Water Fitness"], result["fishers"][:other].map { |e| e[:title] }
   end
+
+  def test_events_in_a_closed_pool_are_alerts_not_lap_swim
+    # Westfield posts day-wide announcements as lap swim in a "POOL CLOSED" studio
+    data = { "apiSchedules" => { "2026-01-15" => { "items" => [
+      item(title: "Lap Lane Swim", studio: "POOL CLOSED", description: "COMPETITION POOL ONLY"),
+      item(title: "Closed Pool") # a timed closure in a real pool stays an other event
+    ] } } }
+
+    result = extract_pool_events(data)
+
+    assert_equal [], result["fishers"][:lap]
+    assert_equal ["Closed Pool"], result["fishers"][:other].map { |e| e[:title] }
+    assert_equal ["POOL CLOSED"], result["fishers"][:alerts].map { |e| e[:studio] }
+  end
 end
 
 class BuildBranchDataTest < Minitest::Test
@@ -303,6 +317,17 @@ class BuildBranchDataTest < Minitest::Test
       ]
     )
     assert_equal ["Shallow Water Fitness", "Deep Water Fitness"], result.first[:classes].map { |c| c[:title] }
+  end
+
+  def test_alerts_grouped_by_day
+    alert = { day: DAY, start_time: "12:00 AM", end_time: "11:00 PM", studio: "POOL CLOSED",
+              title: "Lap Lane Swim", description: "COMPETITION&nbsp; POOL ONLY" }
+    data = build_branch_data("fishers", [lap("11:00 AM", "6:45 PM")], [], [alert])
+    assert_equal(
+      { DAY => [{ title: "POOL CLOSED", start_time: "12:00 AM", end_time: "11:00 PM", text: "COMPETITION POOL ONLY" }] },
+      data[:alerts]
+    )
+    assert_equal 1, data[:schedule][DAY].size
   end
 
   def test_window_without_classes_or_notes

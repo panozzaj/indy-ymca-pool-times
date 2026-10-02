@@ -144,10 +144,12 @@ def clean_description(desc)
   text.match?(/[[:alnum:]]/) ? text : ""
 end
 
-# Extract pool events from Y360 data, split into lap swim sessions and everything else
-# (classes, closures) so we can show what else is happening in the lap pool
+# Extract pool events from Y360 data, split into lap swim sessions, everything else
+# (classes, closures) so we can show what else is happening in the lap pool, and alerts.
+# Alerts are events in a "POOL CLOSED" studio, which branches use for day-wide announcements
+# (e.g. an all-day "Lap Lane Swim" saying only part of the pool is open).
 def extract_pool_events(y360_data)
-  events_by_branch = Hash.new { |h, k| h[k] = { lap: [], other: [] } }
+  events_by_branch = Hash.new { |h, k| h[k] = { lap: [], other: [], alerts: [] } }
 
   y360_data["apiSchedules"].each do |_date, day_data|
     day_data["items"].each do |item|
@@ -159,14 +161,19 @@ def extract_pool_events(y360_data)
       next unless branch_key
 
       title = item["title"]
-      kind = LAP_SWIM_TYPES.include?(title) ? :lap : :other
+      studio = item["studio_name"] || ""
+      kind =
+        if studio.match?(/closed/i) then :alerts
+        elsif LAP_SWIM_TYPES.include?(title) then :lap
+        else :other
+        end
 
       # Convert UTC to Eastern
       events_by_branch[branch_key][kind] << {
         day: utc_to_eastern_date(item["start_at"]),
         start_time: utc_to_eastern_time(item["start_at"]),
         end_time: utc_to_eastern_time(item["end_at"]),
-        studio: item["studio_name"] || "",
+        studio: studio,
         title: title,
         description: item["description"].to_s
       }
@@ -236,7 +243,7 @@ def window_classes(parts, day_others)
 end
 
 # Build branch schedule data
-def build_branch_data(branch_key, sessions, others = [])
+def build_branch_data(branch_key, sessions, others = [], alerts = [])
   # Sort by day and start time
   sessions.sort_by! { |s| [s[:day], Time.parse(s[:start_time])] }
 
@@ -257,11 +264,18 @@ def build_branch_data(branch_key, sessions, others = [])
     [day, windows]
   end
 
+  alerts_by_day = alerts.group_by { |a| a[:day] }.transform_values do |day_alerts|
+    day_alerts.map do |a|
+      { title: a[:studio], start_time: a[:start_time], end_time: a[:end_time], text: clean_description(a[:description]) }
+    end
+  end
+
   {
     key: branch_key,
     name: BRANCHES[branch_key][:display_name],
     days: days,
-    schedule: schedule
+    schedule: schedule,
+    alerts: alerts_by_day
   }
 end
 
@@ -312,13 +326,14 @@ if __FILE__ == $PROGRAM_NAME
       next
     end
 
-    data = build_branch_data(key, sessions, events_by_branch[key][:other])
+    events = events_by_branch[key]
+  data = build_branch_data(key, sessions, events[:other], events[:alerts])
     branches_data << data
     all_days.concat(data[:days])
 
     windows = data[:schedule].values.flatten
     puts " #{windows.size} sessions, #{windows.sum { |w| w[:classes].size }} overlapping classes, " \
-         "#{windows.count { |w| w[:notes].any? }} with notes"
+         "#{windows.count { |w| w[:notes].any? }} with notes, #{data[:alerts].values.flatten.size} alerts"
   end
 
   # Sort days chronologically

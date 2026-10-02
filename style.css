@@ -13,6 +13,9 @@
   --warning-text: #7a4b00;
   --warning-bg: #fff6e0;
   --warning-border: #e0a526;
+  --danger-text: #8a1c1c;
+  --danger-bg: #fdecec;
+  --danger-border: #d64545;
 }
 
 * {
@@ -216,6 +219,27 @@ h1 {
   padding: 0.1rem 0.35rem;
   margin-top: 0.15rem;
   border-radius: 2px;
+}
+
+.pool-class.closure {
+  color: var(--danger-text);
+  background: var(--danger-bg);
+  border-left-color: var(--danger-border);
+}
+
+/* Day-wide announcements, e.g. "POOL CLOSED" */
+.pool-alert {
+  font-size: 0.8rem;
+  color: var(--danger-text);
+  background: var(--danger-bg);
+  border-left: 3px solid var(--danger-border);
+  padding: 0.3rem 0.45rem;
+  margin-bottom: 0.5rem;
+  border-radius: 2px;
+}
+
+.alert-text {
+  display: block;
 }
 
 .class-time {

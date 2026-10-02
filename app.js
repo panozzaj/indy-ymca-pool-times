@@ -248,9 +248,20 @@ function renderClasses(session) {
   const showPool = (session.studios || []).length > 1;
   const items = classes.map(c => {
     const pool = showPool ? ` <span class="class-pool">(${escapeHtml(c.studio)})</span>` : '';
-    return `<li class="pool-class"><span class="class-time">${formatRange(c.start_time, c.end_time)}</span> ${escapeHtml(c.title)}${pool}</li>`;
+    const closure = /closed/i.test(c.title) ? ' closure' : '';
+    return `<li class="pool-class${closure}"><span class="class-time">${formatRange(c.start_time, c.end_time)}</span> ${escapeHtml(c.title)}${pool}</li>`;
   }).join('');
   return `<ul class="pool-classes">${items}</ul>`;
+}
+
+// Day-wide announcements such as a "POOL CLOSED" notice
+function renderAlerts(alerts) {
+  return (alerts || []).map(alert => {
+    const allDay = alert.start_time === '12:00 AM';
+    const when = allDay ? 'All day' : formatRange(alert.start_time, alert.end_time);
+    const text = alert.text ? `<span class="alert-text">${escapeHtml(alert.text)}</span>` : '';
+    return `<div class="pool-alert"><strong>${escapeHtml(alert.title)}</strong> &middot; ${when}${text}</div>`;
+  }).join('');
 }
 
 // Get sessions with gaps (closed times) inserted
@@ -315,6 +326,8 @@ function renderSchedule() {
       } else {
         html += `<h3 class="branch-name">${branch.name}${areaText}</h3>`;
       }
+
+      html += renderAlerts((branch.alerts || {})[day]);
 
       if (rawSessions.length === 0) {
         html += `<p class="no-sessions">No lap swim</p>`;
