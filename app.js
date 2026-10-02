@@ -219,6 +219,51 @@ function minutesToTime(mins) {
   return `${hours}:${minutes.toString().padStart(2, '0')} ${period}`;
 }
 
+// Compact time range: "9:00 AM", "10:00 AM" -> "9-10 AM"; "11:30 AM", "12:30 PM" -> "11:30 AM-12:30 PM"
+function formatRange(start, end) {
+  const trim = t => t.replace(':00', '');
+  const [startTime, startPeriod] = trim(start).split(' ');
+  const [endTime, endPeriod] = trim(end).split(' ');
+  if (startPeriod === endPeriod) return `${startTime}\u2013${endTime} ${endPeriod}`;
+  return `${trim(start)}\u2013${trim(end)}`;
+}
+
+function escapeHtml(text) {
+  return text.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// Notes from the YMCA (e.g. "4 Lanes"); prefix with a time range when a note covers only part of the session
+function renderNotes(session) {
+  return (session.notes || []).map(note => {
+    const coversSession = note.start_time === session.start_time && note.end_time === session.end_time;
+    const range = coversSession ? '' : `<span class="note-range">${formatRange(note.start_time, note.end_time)}:</span> `;
+    return `<span class="note">${range}${escapeHtml(note.text)}</span>`;
+  }).join('');
+}
+
+// Classes or closures in the lap pool during this session
+function renderClasses(session) {
+  const classes = session.classes || [];
+  if (classes.length === 0) return '';
+  const showPool = (session.studios || []).length > 1;
+  const items = classes.map(c => {
+    const pool = showPool ? ` <span class="class-pool">(${escapeHtml(c.studio)})</span>` : '';
+    const closure = /closed/i.test(c.title) ? ' closure' : '';
+    return `<li class="pool-class${closure}"><span class="class-time">${formatRange(c.start_time, c.end_time)}</span> ${escapeHtml(c.title)}${pool}</li>`;
+  }).join('');
+  return `<ul class="pool-classes">${items}</ul>`;
+}
+
+// Day-wide announcements such as a "POOL CLOSED" notice
+function renderAlerts(alerts) {
+  return (alerts || []).map(alert => {
+    const allDay = alert.start_time === '12:00 AM';
+    const when = allDay ? 'All day' : formatRange(alert.start_time, alert.end_time);
+    const text = alert.text ? `<span class="alert-text">${escapeHtml(alert.text)}</span>` : '';
+    return `<div class="pool-alert"><strong>${escapeHtml(alert.title)}</strong> &middot; ${when}${text}</div>`;
+  }).join('');
+}
+
 // Get sessions with gaps (closed times) inserted
 function getSessionsWithGaps(sessions) {
   if (!sessions || sessions.length === 0) return [];
@@ -235,7 +280,6 @@ function getSessionsWithGaps(sessions) {
         result.push({
           start_time: minutesToTime(prevEnd),
           end_time: minutesToTime(currStart),
-          lanes: null,
           isClosed: true
         });
       }
@@ -283,6 +327,8 @@ function renderSchedule() {
         html += `<h3 class="branch-name">${branch.name}${areaText}</h3>`;
       }
 
+      html += renderAlerts((branch.alerts || {})[day]);
+
       if (rawSessions.length === 0) {
         html += `<p class="no-sessions">No lap swim</p>`;
       } else {
@@ -297,7 +343,8 @@ function renderSchedule() {
           } else {
             html += `<li class="session">
               <span class="time">${session.start_time} - ${session.end_time}</span>
-              <span class="lanes">${session.lanes}</span>
+              ${renderNotes(session)}
+              ${renderClasses(session)}
             </li>`;
           }
         });
