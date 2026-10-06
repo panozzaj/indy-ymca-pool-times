@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T09:23:55Z",
+  "generated_at": "2026-10-06T09:15:05Z",
   "days": [
     "2026-10-04",
     "2026-10-05",
@@ -111,8 +111,8 @@
             "start_time": "7:45 PM",
             "end_time": "8:45 PM",
             "studios": [
-              "Program Pool",
-              "Competition Pool"
+              "Competition Pool",
+              "Program Pool"
             ],
             "notes": [
 
@@ -473,7 +473,7 @@
             ]
           },
           {
-            "start_time": "12:00 PM",
+            "start_time": "11:00 AM",
             "end_time": "1:00 PM",
             "studios": [
               "Indoor Pool"
@@ -600,7 +600,8 @@
         "2026-10-06",
         "2026-10-07",
         "2026-10-08",
-        "2026-10-09"
+        "2026-10-09",
+        "2026-10-10"
       ],
       "schedule": {
         "2026-10-05": [
@@ -634,6 +635,43 @@
                 "studio": "Recreational Pool"
               }
             ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Recreational Pool",
+              "Lap Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Aqua Tabata",
+                "start_time": "4:30 PM",
+                "end_time": "5:30 PM",
+                "studio": "Recreational Pool"
+              },
+              {
+                "title": "Aqua Zumba",
+                "start_time": "5:30 PM",
+                "end_time": "6:30 PM",
+                "studio": "Recreational Pool"
+              },
+              {
+                "title": "Deep Water Fitness",
+                "start_time": "6:00 PM",
+                "end_time": "7:00 PM",
+                "studio": "Lap Pool"
+              },
+              {
+                "title": "Shallow Water Fitness",
+                "start_time": "6:30 PM",
+                "end_time": "7:30 PM",
+                "studio": "Recreational Pool"
+              }
+            ]
           }
         ],
         "2026-10-06": [
@@ -664,6 +702,37 @@
                 "title": "Arthritis",
                 "start_time": "10:15 AM",
                 "end_time": "11:15 AM",
+                "studio": "Recreational Pool"
+              }
+            ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Recreational Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Aqua Challenge",
+                "start_time": "5:00 PM",
+                "end_time": "6:00 PM",
+                "studio": "Recreational Pool"
+              },
+              {
+                "title": "Shallow Water Fitness",
+                "start_time": "6:00 PM",
+                "end_time": "7:00 PM",
+                "studio": "Recreational Pool"
+              },
+              {
+                "title": "Instructional/Program Class Reserved",
+                "start_time": "7:00 PM",
+                "end_time": "7:30 PM",
                 "studio": "Recreational Pool"
               }
             ]
@@ -702,9 +771,10 @@
             ]
           },
           {
-            "start_time": "5:00 PM",
+            "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
+              "Recreational Pool",
               "Lap Pool"
             ],
             "notes": [
@@ -712,10 +782,28 @@
             ],
             "classes": [
               {
+                "title": "Aqua Challenge",
+                "start_time": "4:30 PM",
+                "end_time": "5:30 PM",
+                "studio": "Recreational Pool"
+              },
+              {
+                "title": "Aqua Zumba",
+                "start_time": "5:30 PM",
+                "end_time": "6:30 PM",
+                "studio": "Recreational Pool"
+              },
+              {
                 "title": "Deep Water Fitness",
                 "start_time": "6:00 PM",
                 "end_time": "7:00 PM",
                 "studio": "Lap Pool"
+              },
+              {
+                "title": "Shallow Water Fitness",
+                "start_time": "6:30 PM",
+                "end_time": "7:30 PM",
+                "studio": "Recreational Pool"
               }
             ]
           }
@@ -759,7 +847,7 @@
             ]
           },
           {
-            "start_time": "5:00 PM",
+            "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
               "Lap Pool"
@@ -800,6 +888,26 @@
                 "title": "Aqua Strength",
                 "start_time": "12:00 PM",
                 "end_time": "1:00 PM",
+                "studio": "Recreational Pool"
+              }
+            ]
+          }
+        ],
+        "2026-10-10": [
+          {
+            "start_time": "12:00 PM",
+            "end_time": "5:00 PM",
+            "studios": [
+              "Recreational Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Instructional/Program Class Reserved",
+                "start_time": "9:00 AM",
+                "end_time": "1:30 PM",
                 "studio": "Recreational Pool"
               }
             ]
@@ -1299,8 +1407,8 @@
             "start_time": "12:00 PM",
             "end_time": "1:00 PM",
             "studios": [
-              "Lap Pool",
-              "Program Pool"
+              "Program Pool",
+              "Lap Pool"
             ],
             "notes": [
 
@@ -2254,8 +2362,8 @@
             "start_time": "8:00 AM",
             "end_time": "1:00 PM",
             "studios": [
-              "Lap Pool-Program Space",
-              "Lap Lanes 1 & 2"
+              "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space"
             ],
             "notes": [
 
@@ -2308,8 +2416,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Pool-Program Space",
               "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space",
               "Therapy Pool"
             ],
             "notes": [
@@ -2345,8 +2453,8 @@
             "end_time": "8:00 PM",
             "studios": [
               "Lap Lanes 1 & 2",
-              "Lap Pool-Program Space",
-              "Therapy Pool"
+              "Therapy Pool",
+              "Lap Pool-Program Space"
             ],
             "notes": [
 
@@ -2361,8 +2469,8 @@
             "start_time": "5:15 AM",
             "end_time": "1:00 PM",
             "studios": [
-              "Lap Pool-Program Space",
-              "Lap Lanes 1 & 2"
+              "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space"
             ],
             "notes": [
 
@@ -2375,8 +2483,8 @@
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
             "studios": [
-              "Lap Pool-Program Space",
               "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space",
               "Therapy Pool"
             ],
             "notes": [
