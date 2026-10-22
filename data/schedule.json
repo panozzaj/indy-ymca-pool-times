@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T09:13:47Z",
+  "generated_at": "2026-10-22T09:13:45Z",
   "days": [
     "2026-10-18",
     "2026-10-19",
@@ -3120,8 +3120,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Lanes 1 & 2",
               "Lap Pool-Program Space",
+              "Lap Lanes 1 & 2",
               "Therapy Pool"
             ],
             "notes": [
@@ -3228,8 +3228,8 @@
             "end_time": "8:00 PM",
             "studios": [
               "Lap Lanes 1 & 2",
-              "Therapy Pool",
-              "Lap Pool-Program Space"
+              "Lap Pool-Program Space",
+              "Therapy Pool"
             ],
             "notes": [
 
@@ -3258,8 +3258,8 @@
             "start_time": "4:00 PM",
             "end_time": "7:30 PM",
             "studios": [
-              "Lap Pool-Program Space",
               "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space",
               "Therapy Pool"
             ],
             "notes": [
@@ -3318,8 +3318,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Pool-Program Space",
               "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space",
               "Therapy Pool"
             ],
             "notes": [
