@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T09:11:44Z",
+  "generated_at": "2026-10-26T09:21:30Z",
   "days": [
     "2026-10-25",
     "2026-10-26",
@@ -7,7 +7,8 @@
     "2026-10-28",
     "2026-10-29",
     "2026-10-30",
-    "2026-10-31"
+    "2026-10-31",
+    "2026-11-01"
   ],
   "branches": [
     {
@@ -20,7 +21,8 @@
         "2026-10-28",
         "2026-10-29",
         "2026-10-30",
-        "2026-10-31"
+        "2026-10-31",
+        "2026-11-01"
       ],
       "schedule": {
         "2026-10-25": [
@@ -264,6 +266,26 @@
 
             ]
           }
+        ],
+        "2026-11-01": [
+          {
+            "start_time": "11:30 AM",
+            "end_time": "2:30 PM",
+            "studios": [
+              "Competition Pool",
+              "Program Pool"
+            ],
+            "notes": [
+              {
+                "start_time": "11:30 AM",
+                "end_time": "2:30 PM",
+                "text": "9 Lanes"
+              }
+            ],
+            "classes": [
+
+            ]
+          }
         ]
       },
       "alerts": {
@@ -279,7 +301,8 @@
         "2026-10-28",
         "2026-10-29",
         "2026-10-30",
-        "2026-10-31"
+        "2026-10-31",
+        "2026-11-01"
       ],
       "schedule": {
         "2026-10-25": [
@@ -536,6 +559,21 @@
 
             ]
           },
+          {
+            "start_time": "1:00 PM",
+            "end_time": "5:00 PM",
+            "studios": [
+              "Indoor Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
+            ]
+          }
+        ],
+        "2026-11-01": [
           {
             "start_time": "1:00 PM",
             "end_time": "5:00 PM",
@@ -1119,7 +1157,7 @@
         "2026-10-31": [
           {
             "start_time": "7:00 AM",
-            "end_time": "5:00 PM",
+            "end_time": "12:00 PM",
             "studios": [
               "Fitness Pool"
             ],
@@ -1137,12 +1175,6 @@
                 "title": "Instructional/Program Class Reserved",
                 "start_time": "9:00 AM",
                 "end_time": "11:30 AM",
-                "studio": "Fitness Pool"
-              },
-              {
-                "title": "Family Swim",
-                "start_time": "12:00 PM",
-                "end_time": "5:00 PM",
                 "studio": "Fitness Pool"
               }
             ]
@@ -2396,8 +2428,8 @@
             "end_time": "8:00 PM",
             "studios": [
               "Lap Lanes 1 & 2",
-              "Therapy Pool",
-              "Lap Pool-Program Space"
+              "Lap Pool-Program Space",
+              "Therapy Pool"
             ],
             "notes": [
 
