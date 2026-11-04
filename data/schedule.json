@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T09:09:02Z",
+  "generated_at": "2026-11-04T09:09:18Z",
   "days": [
     "2026-11-01",
     "2026-11-02",
@@ -763,6 +763,19 @@
                 "studio": "Recreational Pool"
               }
             ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "7:45 PM",
+            "studios": [
+              "Lap Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
+            ]
           }
         ],
         "2026-11-04": [
@@ -798,13 +811,17 @@
             ]
           },
           {
-            "start_time": "5:00 PM",
+            "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
               "Lap Pool"
             ],
             "notes": [
-
+              {
+                "start_time": "4:00 PM",
+                "end_time": "8:00 PM",
+                "text": "4 Lanes Reserved for Cathedral 4-6p"
+              }
             ],
             "classes": [
               {
@@ -856,6 +873,19 @@
                 "end_time": "11:15 AM",
                 "studio": "Recreational Pool"
               }
+            ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "7:45 PM",
+            "studios": [
+              "Lap Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
             ]
           }
         ],
@@ -1814,6 +1844,156 @@
       }
     },
     {
+      "key": "irsay",
+      "name": "Irsay",
+      "days": [
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "schedule": {
+        "2026-11-04": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "1:00 PM",
+            "studios": [
+              "Lap Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Family Swim",
+                "start_time": "9:00 AM",
+                "end_time": "10:00 AM",
+                "studio": "Lap Pool"
+              }
+            ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Therapy Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Family Swim",
+                "start_time": "4:00 PM",
+                "end_time": "8:00 PM",
+                "studio": "Therapy Pool"
+              },
+              {
+                "title": "Family Swim",
+                "start_time": "5:00 PM",
+                "end_time": "7:00 PM",
+                "studio": "Therapy Pool"
+              }
+            ]
+          }
+        ],
+        "2026-11-05": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "1:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Therapy Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
+            ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Therapy Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Aqua Mobility",
+                "start_time": "5:00 PM",
+                "end_time": "6:00 PM",
+                "studio": "Lap Pool"
+              },
+              {
+                "title": "Family Swim",
+                "start_time": "5:00 PM",
+                "end_time": "7:00 PM",
+                "studio": "Therapy Pool"
+              }
+            ]
+          }
+        ],
+        "2026-11-06": [
+          {
+            "start_time": "5:15 AM",
+            "end_time": "1:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Therapy Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+              {
+                "title": "Aqua Challenge",
+                "start_time": "9:00 AM",
+                "end_time": "10:00 AM",
+                "studio": "Therapy Pool"
+              }
+            ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Therapy Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
+            ]
+          }
+        ],
+        "2026-11-07": [
+          {
+            "start_time": "7:15 AM",
+            "end_time": "5:00 PM",
+            "studios": [
+              "Lap Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
+            ]
+          }
+        ]
+      },
+      "alerts": {
+      }
+    },
+    {
       "key": "jordan",
       "name": "Jordan",
       "days": [
@@ -2632,8 +2812,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Pool-Program Space",
               "Lap Lanes 1 & 2",
+              "Lap Pool-Program Space",
               "Therapy Pool"
             ],
             "notes": [
@@ -2815,8 +2995,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Lanes 1 & 2",
               "Lap Pool-Program Space",
+              "Lap Lanes 1 & 2",
               "Therapy Pool"
             ],
             "notes": [
