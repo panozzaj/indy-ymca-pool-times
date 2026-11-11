@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T09:08:57Z",
+  "generated_at": "2026-11-11T09:09:00Z",
   "days": [
     "2026-11-08",
     "2026-11-09",
@@ -1851,6 +1851,7 @@
       "key": "irsay",
       "name": "Irsay",
       "days": [
+        "2026-11-10",
         "2026-11-11",
         "2026-11-12",
         "2026-11-13",
@@ -1858,6 +1859,22 @@
         "2026-11-16"
       ],
       "schedule": {
+        "2026-11-10": [
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Therapy Pool",
+              "Lap Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
+            ]
+          }
+        ],
         "2026-11-11": [
           {
             "start_time": "5:15 AM",
@@ -1869,37 +1886,20 @@
 
             ],
             "classes": [
-              {
-                "title": "Family Swim",
-                "start_time": "9:00 AM",
-                "end_time": "10:00 AM",
-                "studio": "Lap Pool"
-              }
+
             ]
           },
           {
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Pool",
-              "Therapy Pool"
+              "Lap Pool"
             ],
             "notes": [
 
             ],
             "classes": [
-              {
-                "title": "Family Swim",
-                "start_time": "4:00 PM",
-                "end_time": "8:00 PM",
-                "studio": "Therapy Pool"
-              },
-              {
-                "title": "Family Swim",
-                "start_time": "5:00 PM",
-                "end_time": "7:00 PM",
-                "studio": "Therapy Pool"
-              }
+
             ]
           }
         ],
@@ -1934,12 +1934,6 @@
                 "start_time": "5:00 PM",
                 "end_time": "6:00 PM",
                 "studio": "Lap Pool"
-              },
-              {
-                "title": "Family Swim",
-                "start_time": "5:00 PM",
-                "end_time": "7:00 PM",
-                "studio": "Therapy Pool"
               }
             ]
           }
@@ -2007,23 +2001,25 @@
             ],
             "classes": [
               {
-                "title": "Closed Pool",
+                "title": "Aqua Challenge",
                 "start_time": "9:00 AM",
                 "end_time": "10:00 AM",
                 "studio": "Therapy Pool"
-              },
-              {
-                "title": "Closed Pool",
-                "start_time": "10:15 AM",
-                "end_time": "11:30 AM",
-                "studio": "Therapy Pool"
-              },
-              {
-                "title": "Closed Pool",
-                "start_time": "12:00 PM",
-                "end_time": "1:00 PM",
-                "studio": "Lap Pool"
               }
+            ]
+          },
+          {
+            "start_time": "4:00 PM",
+            "end_time": "8:00 PM",
+            "studios": [
+              "Lap Pool",
+              "Therapy Pool"
+            ],
+            "notes": [
+
+            ],
+            "classes": [
+
             ]
           }
         ]
