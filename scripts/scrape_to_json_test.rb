@@ -238,6 +238,22 @@ class ExtractPoolEventsTest < Minitest::Test
     assert_equal ["Closed Pool"], result["fishers"][:other].map { |e| e[:title] }
     assert_equal ["POOL CLOSED"], result["fishers"][:alerts].map { |e| e[:studio] }
   end
+
+  def test_family_swim_counts_only_in_fishers_fitness_pool
+    # Fishers calls open swim "Family Swim"; elsewhere it's in shallow/therapy pools
+    data = { "apiSchedules" => { "2026-01-15" => { "items" => [
+      item(title: "Family Swim", studio: "Fitness Pool"),
+      item(title: "Family Swim", studio: "Program Pool"),
+      item(title: "Family Swim", studio: "Therapy Pool", branch: "Irsay Family YMCA at CityWay")
+    ] } } }
+
+    result = extract_pool_events(data)
+
+    assert_equal ["Fitness Pool"], result["fishers"][:lap].map { |e| e[:studio] }
+    assert_equal ["Program Pool"], result["fishers"][:other].map { |e| e[:studio] }
+    assert_equal [], result["irsay"][:lap]
+    assert_equal ["Therapy Pool"], result["irsay"][:other].map { |e| e[:studio] }
+  end
 end
 
 class BuildBranchDataTest < Minitest::Test

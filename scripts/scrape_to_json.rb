@@ -67,6 +67,17 @@ SOURCE_NAME_TO_KEY = BRANCHES.transform_values { |v| v[:source_name] }.invert.fr
 # Pool schedule types that count as lap swim
 LAP_SWIM_TYPES = ["Lap Lane Swim", "Open Swim"].freeze
 
+# Per-pool extra lap swim types, keyed by [branch key, studio]. Fishers calls its open swim
+# "Family Swim"; other branches only use that name in shallow or therapy pools, so it is
+# not a lap swim type everywhere.
+EXTRA_LAP_SWIM_TYPES = {
+  ["fishers", "Fitness Pool"] => ["Family Swim"]
+}.freeze
+
+def lap_swim?(branch_key, studio, title)
+  LAP_SWIM_TYPES.include?(title) || EXTRA_LAP_SWIM_TYPES.fetch([branch_key, studio], []).include?(title)
+end
+
 # Convert UTC ISO timestamp to Eastern time, handling DST correctly
 def utc_to_eastern(iso_str)
   # Parse as UTC, convert to Eastern using TZ
@@ -164,7 +175,7 @@ def extract_pool_events(y360_data)
       studio = item["studio_name"] || ""
       kind =
         if studio.match?(/closed/i) then :alerts
-        elsif LAP_SWIM_TYPES.include?(title) then :lap
+        elsif lap_swim?(branch_key, studio, title) then :lap
         else :other
         end
 
