@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:09:21Z",
+  "generated_at": "2026-11-26T09:09:17Z",
   "days": [
     "2026-11-22",
     "2026-11-23",
@@ -21,7 +21,6 @@
         "2026-11-23",
         "2026-11-24",
         "2026-11-25",
-        "2026-11-26",
         "2026-11-27",
         "2026-11-28",
         "2026-11-29",
@@ -163,50 +162,6 @@
                 "end_time": "8:45 PM",
                 "text": "9 Lanes"
               }
-            ],
-            "classes": [
-
-            ]
-          }
-        ],
-        "2026-11-26": [
-          {
-            "start_time": "5:00 AM",
-            "end_time": "1:00 PM",
-            "studios": [
-              "Program Pool",
-              "Competition Pool"
-            ],
-            "notes": [
-              {
-                "start_time": "5:00 AM",
-                "end_time": "1:00 PM",
-                "text": "9 Lanes"
-              }
-            ],
-            "classes": [
-              {
-                "title": "Shallow Water Fitness",
-                "start_time": "9:15 AM",
-                "end_time": "10:10 AM",
-                "studio": "Program Pool"
-              },
-              {
-                "title": "Deep Water Fitness",
-                "start_time": "10:15 AM",
-                "end_time": "11:10 AM",
-                "studio": "Program Pool"
-              }
-            ]
-          },
-          {
-            "start_time": "7:45 PM",
-            "end_time": "8:45 PM",
-            "studios": [
-              "Program Pool"
-            ],
-            "notes": [
-
             ],
             "classes": [
 
@@ -2017,8 +1972,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Pool",
-              "Therapy Pool"
+              "Therapy Pool",
+              "Lap Pool"
             ],
             "notes": [
 
@@ -3116,8 +3071,8 @@
             "start_time": "4:00 PM",
             "end_time": "8:00 PM",
             "studios": [
-              "Lap Lanes 1 & 2",
               "Lap Pool-Program Space",
+              "Lap Lanes 1 & 2",
               "Therapy Pool"
             ],
             "notes": [
@@ -3224,8 +3179,8 @@
             "end_time": "8:00 PM",
             "studios": [
               "Lap Lanes 1 & 2",
-              "Therapy Pool",
-              "Lap Pool-Program Space"
+              "Lap Pool-Program Space",
+              "Therapy Pool"
             ],
             "notes": [
 
